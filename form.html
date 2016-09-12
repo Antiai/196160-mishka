@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка: Форма заказа</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a href="index.html" class="logo"><img src="http://placehold.it/86x35" alt="Лого Мишка" width="86" height="35" class="logo__pic"></a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--active">Вязание на заказ</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Корзина: <span class="goods-quantity">пока пуста</span></a></li>
+        </ul>
+      </nav>
+      <div class="page-header__wrapper page-header__wrapper--title">
+        <h1 class="page-header__title">Вязание на заказ</h1>
+      </div>
+    </header>
+    <main  class="page">
+      <div class="page__wrapper">
+        <form class="form-order" action="https://echo.htmlacademy.ru/" method="get">
+          <p class="form-order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <fieldset class="form-order__fieldset">
+            <legend class="form-order__legend">Тип</legend>
+            <input type="radio" id="accessory" class="form-order__radio" name="type" checked>
+            <label for="accessory" class="form-order__label">Аксессуар для интерьера</label>
+            <input type="radio" id="toy" class="form-order__radio" name="type">
+            <label for="toy" class="form-order__label">Детская игрушка</label>
+          </fieldset>
+          <fieldset class="form-order__fieldset">
+            <legend class="form-order__legend">Цвет</legend>
+            <input type="checkbox" id="white" class="form-order__checkbox" checked>
+            <label for="white" class="form-order__label">Белый</label>
+            <input type="checkbox" id="grey" class="form-order__checkbox" checked>
+            <label for="grey" class="form-order__label">Серый</label>
+            <input type="checkbox" id="tiffani" class="form-order__checkbox">
+            <label for="tiffani" class="form-order__label">"Тиффани"</label>
+            <input type="checkbox" id="black" class="form-order__checkbox">
+            <label for="black" class="form-order__label">Черный</label>
+            <input type="checkbox" id="pink" class="form-order__checkbox">
+            <label for="pink" class="form-order__label">Розовый</label>
+            <input type="checkbox" id="orange" class="form-order__checkbox">
+            <label for="orange" class="form-order__label">Оранжевый</label>
+          </fieldset>
+          <fieldset class="form-order__fieldset">
+            <legend class="form-order__legend">ФИО</legend>
+            <label for="name" class="form-order__label">Имя:</label>
+            <input type="text" id="name" class="form-order__text" name="name" placeholder="Введите Ваше имя">
+            <label for="surname" class="form-order__label">Фамилия:</label>
+            <input type="text" id="surname" class="form-order__text" name="surname" placeholder="Укажите фамилию">
+            <label for="patronymic" class="form-order__label">Отчество:</label>
+            <input type="text" id="patronymic" class="form-order__text" name="patronymic" placeholder="Отчество, если желаете">
+          </fieldset>
+          <fieldset class="form-order__fieldset">
+            <label for="phone" class="form-order__label form-order__label--green">Тел</label>
+            <input type="text" id="phone" class="form-order__text" name="phone" placeholder="+7 ХХХ ХХ ХХ">
+            <label for="phone" class="form-order__label  form-order__label--icon"><img src="http://placehold.it/32x24" alt="Телефон" width="32" height="24"></label>
+          </fieldset>
+          <fieldset class="form-order__fieldset">
+            <label for="email" class="form-order__label form-order__label--green">E-mail</label>
+            <input type="text" id="email" class="form-order__text" name="email" placeholder="Ваш Email">
+            <label for="email" class="form-order__label  form-order__label--icon"><img src="http://placehold.it/32x24" alt="Конверт" width="32" height="24"></label>
+          </fieldset>
+          <fieldset class="form-order__fieldset">
+            <label for="additionally" class="form-order__label form-order__label--green">Доп</label>
+            <textarea class="form-order__textarea" id="additionally" name="additionally" rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </fieldset>
+          <p class="form-order__note">Все поля обязательны для заполнения</p>
+          <button class="form-order__btn" type="submit">Отправить заказ</button>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="social">
+          <a href="#" class="social__icon  social__icon--instagram"><img src="http://placehold.it/24x29" alt="Instagram" width="24" height="29"><span class="visually-hide">Intagram</span></a>
+          <a href="#" class="social__icon  social__icon--facebook"><img src="http://placehold.it/24x29" alt="Facebook" width="24" height="29"><span class="visually-hide">Facebook</span></a>
+          <a href="#" class="social__icon  social__icon--twitter"><img src="http://placehold.it/24x29" alt="Twitter" width="24" height="29"><span class="visually-hide">Twitter</span></a>
+        </div>
+      </div>
+      <div class="page-footer__wrapper">
+        <div class="developer">
+          <div class="developer__title">Разработано</div>
+          <div class="developer__logo"><img src="http://placehold.it/27x34" alt="Twitter" width="27" height="34"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
