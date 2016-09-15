@@ -1,4 +1,20 @@
-.set-font(@font-size, @line-height: @line) {
-  font-size: @font-size;
-  line-height: @line-height;
+.include-custom-font(@src, @family, @weight: normal, @style: normal) {
+  @font-face {
+    font-family: @family;
+    font-weight: @weight;
+    font-style: @style;
+
+    src: url("../../fonts/@{src}.woff") format("woff"),
+    url("../../fonts/@{src}.woff2") format("woff2");
+  }
+}
+
+.set-wrapper-padding() {
+  padding-right: @wrapper-padding;
+  padding-left: @wrapper-padding;
+}
+
+.set-up-bottom-shadow {
+  box-shadow: 0 1px @very-light-gray,
+  inset 0 1px @very-light-gray;
 }
