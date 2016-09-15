@@ -1,0 +1,33 @@
+.page-header {
+  background-color: @header-bg-color;
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__wrapper {
+    .set-wrapper-padding();
+    .set-up-bottom-shadow();
+    min-height: 79px;
+
+    &--index {
+      min-height: 282px;
+      background-color: @header-title-bg-color;
+      background-image: url("../img/hero-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+
+    &--title {
+      min-height: 282px;
+      background-color: @header-title-bg-color;
+    }
+  }
+
+  &__title {
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+}
