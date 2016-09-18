@@ -1,0 +1,61 @@
+.form-cart {
+  &__fieldset {
+    font-size: 0;
+
+    width: 100%;
+    margin-bottom: 31px;
+
+    text-align: center;
+
+    border: none;
+  }
+
+  &__legend {
+    font-size: 15px;
+    line-height: 30px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: @scheme-color-8;
+  }
+
+  &__select {
+    display: none;
+    &:checked + label {
+      border-color: @scheme-color-6;
+    }
+  }
+
+  &__label {
+    .btn();
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 17px;
+
+    display: inline-block;
+
+    width: 31.16%;
+
+    vertical-align: middle;
+
+    color: @scheme-color-8;
+    border-color: @scheme-color-transparent-4;
+
+    &:not(:last-child) {
+      margin-right: 2.69%;
+    }
+  }
+
+  &__btn {
+    .btn();
+
+    width: 100%;
+
+    color: @scheme-color-1;
+    border: none;
+    background-color: @scheme-color-6;
+  }
+}

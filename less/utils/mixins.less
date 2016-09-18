@@ -1,21 +1,24 @@
 .include-custom-font(@src, @family, @weight: normal, @style: normal) {
   @font-face {
+    src: url("../../fonts/@{src}.woff") format("woff"),
+    url("../../fonts/@{src}.woff2") format("woff2");
+
     font-family: @family;
     font-weight: @weight;
     font-style: @style;
-
-    src: url("../../fonts/@{src}.woff") format("woff"),
-    url("../../fonts/@{src}.woff2") format("woff2");
   }
 }
 
 .btn() {
-  font-weight: bold;
   font-size: 17px;
+  font-weight: bold;
   line-height: 17px;
 
   display: block;
 
+  padding: 16px;
+
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -23,18 +26,18 @@
   color: @scheme-color-8;
   border: 2px solid @scheme-color-8;
   background-color: @scheme-color-1;
-  padding: 16px;
 }
 
 .center() {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .clearfix() {
-  content: "";
   display: table;
   clear: both;
+
+  content: "";
 }
 
 .set-wrapper-padding() {
@@ -45,4 +48,51 @@
 .set-up-bottom-shadow {
   box-shadow: 0 1px @very-light-gray,
   inset 0 1px @very-light-gray;
+}
+
+.set-green-line() {
+  align-items: center;
+  flex-basis: 100%;
+
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 17px;
+
+  display: flex;
+
+  width: 100%;
+
+  text-transform: uppercase;
+
+  color: @scheme-color-6;
+
+
+  &:after {
+    flex-grow: 1;
+
+    font-size: 0;
+    line-height: 0;
+
+    width: 100%;
+    height: 1px;
+    margin-left: 8%;
+
+    content: "";
+
+    background-color: @scheme-color-6;
+  }
+}
+
+.set-box() {
+  position: absolute;
+  top: -50%;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 22px;
+
+  content: "";
+
+  border: 2px solid @scheme-color-8;
 }

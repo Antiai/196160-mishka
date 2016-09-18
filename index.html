@@ -145,24 +145,24 @@
       <div class="page-footer__wrapper">
         <div class="developer">
           <div class="developer__title">Разработано</div>
-          <div class="developer__logo"><img src="img/logos/logo-htmlacademy.svg" alt="Twitter" width="27" height="34"></div>
+          <a href="https://htmlacademy.ru/" class="developer__logo"><img src="img/logos/logo-htmlacademy.svg" alt="Twitter" width="27" height="34"></a>
         </div>
       </div>
     </footer>
     <section class="pop-up">
       <div class="pop-up__wrapper">
         <h2 class="pop-up__title">Добавить в корзину</h2>
-        <form class="form-basket" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form-basket__fieldset">
-            <legend class="form-basket__legend">Выберите размер:</legend>
-            <input id="small" type="radio" class="form-basket__select" name="size" value="S"  checked>
-            <label for="small" class="form-basket__label">S</label>
-            <input id="medium" type="radio" class="form-basket__select" name="size" value="M">
-            <label for="medium" class="form-basket__label">M</label>
-            <input id="large" type="radio" class="form-basket__select" name="size" value="L">
-            <label for="large" class="form-basket__label">L</label>
+        <form class="form-cart" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="form-cart__fieldset">
+            <legend class="form-cart__legend">Выберите размер:</legend>
+            <input id="small" type="radio" class="form-cart__select" name="size" value="S"  checked>
+            <label for="small" class="form-cart__label">S</label>
+            <input id="medium" type="radio" class="form-cart__select" name="size" value="M">
+            <label for="medium" class="form-cart__label">M</label>
+            <input id="large" type="radio" class="form-cart__select" name="size" value="L">
+            <label for="large" class="form-cart__label">L</label>
           </fieldset>
-          <button class="pop-up__btn" type="submit">Добавить</button>
+          <button class="form-cart__btn" type="submit">Добавить</button>
         </form>
       </div>
     </section>
