@@ -12,13 +12,33 @@
 
   &__fieldset {
     width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 36px;
+    margin-left: 0;
     padding: 0;
 
-    border: none;
+    border-top: 1px solid @scheme-color-6;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
   }
 
   &__legend {
-    .set-green-line();
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 17px;
+
+    margin-bottom: 35px;
+    padding-right: 22px;
+
+    text-transform: uppercase;
+
+    color: @scheme-color-6;
+
+    &--short {
+      margin-bottom: 0;
+    }
   }
 
   &__filters {
@@ -28,9 +48,11 @@
   }
 
   &__item {
-    padding-top: 14px;
-    padding-right: 14px;
-    padding-bottom: 14px;
+    padding-top: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
   }
 
   &__filter {
@@ -40,7 +62,7 @@
       &:checked + label {
         &:after {
           position: absolute;
-          top: 3px;
+          top: 2px;
           left: 12px;
 
           width: 16px;
@@ -65,9 +87,10 @@
           height: 40px;
 
           content: "";
+
+          background-image: url("../img/icons/icon-tick.svg");
           background-repeat: no-repeat;
           background-position: center center;
-          background-image: url("../img/icons/icon-tick.svg");
         }
       }
     }
@@ -80,11 +103,13 @@
 
     position: relative;
 
-    padding-left: 62px;
+    display: block;
 
     cursor: pointer;
 
     &--radio {
+      padding-left: 62px;
+
       &:before {
         .set-box();
 
@@ -93,14 +118,43 @@
     }
 
     &--checkbox {
+      padding-left: 62px;
+
       &:before {
         .set-box();
       }
     }
+  }
 
-    &--green {
-      .set-green-line();
+  &__text {
+    font-size: 17px;
+    line-height: 18px;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 55px;
+
+    color: @scheme-color-8;
+    border: none;
+    box-shadow: inset 0 -2px @scheme-color-2;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
     }
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid @scheme-color-8;
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 21px;
+    color: @scheme-color-8;
   }
 
   &__btn {
