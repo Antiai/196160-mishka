@@ -96,6 +96,10 @@
     }
   }
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__label {
     font-size: 17px;
     font-weight: bold;
@@ -124,13 +128,19 @@
         .set-box();
       }
     }
+
+    &--icon {
+      position: absolute;
+      right: 0;
+      top: 27px;
+      transform: translateY(-50%);
+      opacity: 0.2;
+    }
   }
 
   &__text {
     font-size: 17px;
     line-height: 18px;
-
-    position: relative;
 
     width: 100%;
     min-height: 55px;

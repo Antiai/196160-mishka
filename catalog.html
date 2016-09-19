@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка: Каталог</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -25,14 +26,26 @@
               <span class="main-nav__wrapper">Вязание на заказ</span>
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item--search">
             <a class="main-nav__link" href="#">
-              <span class="main-nav__wrapper">Поиск по сайту</span>
+              <span class="main-nav__icon"><img src="img/icons/icon-search.svg" alt="Поиск"></span>
+              <span class="main-nav__wrapper main-nav__wrapper--hidden">Поиск по сайту</span>
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item--cart">
             <a class="main-nav__link" href="#">
-              <span class="main-nav__wrapper">Корзина: <span class="goods-quantity">пока пуста</span></span>
+              <span class="main-nav__icon"><img src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" ></span>
+              <span class="main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+            </a>
+          </li>
+          <li class="main-nav__item  main-nav__item--novelty">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__wrapper">Новые поступления</span>
+            </a>
+          </li>
+          <li class="main-nav__item  main-nav__item--sales">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__wrapper">Распродажа</span>
             </a>
           </li>
         </ul>

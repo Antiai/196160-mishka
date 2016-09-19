@@ -2,45 +2,77 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="main-page">
     <header class="page-header">
       <div class="page-header__wrapper  page-header__wrapper--table">
-        <a class="page-header__logo page-header__logo--active"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
+        <a class="page-header__logo  page-header__logo--active"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
         <div class="page-header__toggle-wrapper">
           <a class="page-header__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
         </div>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__items">
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html"><span class="main-nav__wrapper">Каталог товаров</span></a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html"><span class="main-nav__wrapper">Вязание на заказ</span></a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#"><span class="main-nav__wrapper">Поиск по сайту</span></a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#"><span class="main-nav__wrapper">Корзина: <span class="goods-quantity">пока пуста</span></span></a></li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">
+              <span class="main-nav__wrapper">Каталог товаров</span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">
+              <span class="main-nav__wrapper">Вязание на заказ</span>
+            </a>
+          </li>
+          <li class="main-nav__item--search">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__icon"><img src="img/icons/icon-search.svg" alt="Поиск"></span>
+              <span class="main-nav__wrapper main-nav__wrapper--hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__item--cart">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__icon"><img src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" ></span>
+              <span class="main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+            </a>
+          </li>
+          <li class="main-nav__item  main-nav__item--novelty">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__wrapper">Новые поступления</span>
+            </a>
+          </li>
+          <li class="main-nav__item  main-nav__item--sales">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__wrapper">Распродажа</span>
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="page-header__wrapper  page-header__wrapper--index">
+        <p class="page-header__note">Бесплатная доставка по России</p>
         <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
+      </div>
+      <div class="catalog-parts">
+        <ul class="catalog-parts__items">
+          <li class="catalog-parts__item">
+            <a class="catalog-parts__link" href="#">
+              <p class="catalog-parts__title">Предметы интерьера</p>
+              <span class="catalog-parts__icon-wrapper"><img class="catalog-parts__icon" src="img/icons/icon-interior.svg" alt="Предметы интерьера" width="61" height="61"></span>
+            </a>
+          </li>
+          <li class="catalog-parts__item">
+            <a class="catalog-parts__link" href="#">
+              <p class="catalog-parts__title">Детские игрушки</p>
+              <span class="catalog-parts__icon-wrapper"><img class="catalog-parts__icon" src="img/icons/icon-toy.svg" alt="Детские игрушки" width="61" height="61"></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
       <section class="catalog-short">
-        <ul class="catalog-short__items">
-          <li class="catalog-short__item">
-            <a class="catalog-short__link" href="#">
-              <p class="catalog-short__title">Предметы интерьера</p>
-              <span class="catalog-short__icon-wrapper"><img class="catalog-short__icon" src="img/icons/icon-interior.svg" alt="Предметы интерьера" width="61" height="61"></span>
-            </a>
-          </li>
-          <li class="catalog-short__item">
-            <a class="catalog-short__link" href="#">
-              <p class="catalog-short__title">Детские игрушки</p>
-              <span class="catalog-short__icon-wrapper"><img class="catalog-short__icon" src="img/icons/icon-toy.svg" alt="Детские игрушки" width="61" height="61"></span>
-            </a>
-          </li>
-        </ul>
         <div class="catalog-short__wrapper">
           <article class="product">
             <h2 class="product__title">Вязаные корзинки</h2>

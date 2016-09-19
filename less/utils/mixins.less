@@ -41,8 +41,13 @@
 }
 
 .set-wrapper-padding() {
-  padding-right: @wrapper-padding;
-  padding-left: @wrapper-padding;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+
+  @media @tablet {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .set-up-bottom-shadow {

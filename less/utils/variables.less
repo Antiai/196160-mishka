@@ -1,3 +1,12 @@
+// BREAKPOINTS
+@min-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1200px;
+
+// MEDIA CONDITIONS
+@tablet: ~"screen and (min-width: @{tablet-width})";
+@desktop: ~"screen and (min-width: @{desktop-width})";
+
 // #colors
 @white: #fff;
 @black: #000;
@@ -32,10 +41,3 @@
 @scheme-color-transparent-2: @transparent-dark-gray-30;
 @scheme-color-transparent-3: @transparent-black-50;
 @scheme-color-transparent-4: @transparent-dark-gray-10;
-
-// dimensions
-@min-width: 320px;
-
-// blocks
-// __wrapper
-@wrapper-padding: 9.375%;
