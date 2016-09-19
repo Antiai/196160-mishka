@@ -1,0 +1,70 @@
+.include-custom-font(@src, @family, @weight: normal, @style: normal) {
+  @font-face {
+    src: url("../../fonts/@{src}.woff") format("woff"),
+    url("../../fonts/@{src}.woff2") format("woff2");
+
+    font-family: @family;
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.btn() {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 17px;
+
+  display: block;
+
+  padding: 16px;
+
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: @scheme-color-8;
+  border: 2px solid @scheme-color-8;
+  background-color: @scheme-color-1;
+}
+
+.center() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.clearfix() {
+  display: table;
+  clear: both;
+
+  content: "";
+}
+
+.set-wrapper-padding() {
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+
+  @media @tablet {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.set-up-bottom-shadow {
+  box-shadow: 0 1px @very-light-gray,
+  inset 0 1px @very-light-gray;
+}
+
+.set-box() {
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 22px;
+
+  content: "";
+
+  border: 2px solid @scheme-color-8;
+}

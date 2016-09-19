@@ -1,0 +1,49 @@
+.contacts {
+  min-width: @min-width;
+  padding-top: 22px;
+
+  &__wrapper {
+    .set-wrapper-padding();
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__items {
+    display: table;
+    // width: 100%;
+  }
+
+  &__item {
+    display: table-cell;
+
+    width: 77px;
+  }
+
+  &__content {
+    padding-bottom: 5px;
+
+    &--border {
+      border-bottom: 1px solid @scheme-color-6;
+    }
+  }
+
+  &__map {
+    min-width: 320px;
+    min-height: 457px;
+
+    background-color: @scheme-color-4;
+    background-image: url("../img/maps/map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &__btn {
+    .btn();
+
+    margin-top: 39px;
+    margin-bottom: 39px;
+  }
+}
