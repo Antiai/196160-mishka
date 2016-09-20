@@ -7,7 +7,7 @@
 
     margin-bottom: 25px;
 
-    color: @scheme-color-8;
+    color: @txtContent;
   }
 
   &__fieldset {
@@ -18,7 +18,7 @@
     margin-left: 0;
     padding: 0;
 
-    border-top: 1px solid @scheme-color-6;
+    border-top: 1px solid @formFieldsetBorder;
     border-right: none;
     border-bottom: none;
     border-left: none;
@@ -34,7 +34,7 @@
 
     text-transform: uppercase;
 
-    color: @scheme-color-6;
+    color: @formLegendText;
 
     &--short {
       margin-bottom: 0;
@@ -59,39 +59,35 @@
     display: none;
 
     &--radio {
-      &:checked + label {
-        &:after {
-          position: absolute;
-          top: 2px;
-          left: 12px;
+      &:checked + label::after {
+        position: absolute;
+        top: 2px;
+        left: 12px;
 
-          width: 16px;
-          height: 16px;
+        width: 16px;
+        height: 16px;
 
-          content: "";
+        content: "";
 
-          border-radius: 50%;
-          background-color: @scheme-color-6;
-        }
+        border-radius: 50%;
+        background-color: @formFilterChecked;
       }
     }
 
     &--checkbox {
-      &:checked + label {
-        &:after {
-          position: absolute;
-          top: -50%;
-          left: 0;
+      &:checked + label::after {
+        position: absolute;
+        top: -50%;
+        left: 0;
 
-          width: 40px;
-          height: 40px;
+        width: 40px;
+        height: 40px;
 
-          content: "";
+        content: "";
 
-          background-image: url("../img/icons/icon-tick.svg");
-          background-repeat: no-repeat;
-          background-position: center center;
-        }
+        background-image: url("../img/icons/icon-tick.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
       }
     }
   }
@@ -114,7 +110,7 @@
     &--radio {
       padding-left: 62px;
 
-      &:before {
+      &::before {
         .set-box();
 
         border-radius: 50%;
@@ -124,7 +120,7 @@
     &--checkbox {
       padding-left: 62px;
 
-      &:before {
+      &::before {
         .set-box();
       }
     }
@@ -145,9 +141,9 @@
     width: 100%;
     min-height: 55px;
 
-    color: @scheme-color-8;
+    color: @formText;
     border: none;
-    box-shadow: inset 0 -2px @scheme-color-2;
+    box-shadow: inset 0 -2px @formBorder;
 
     &:not(:last-child) {
       margin-bottom: 24px;
@@ -158,13 +154,13 @@
     width: 100%;
     padding: 15px;
 
-    border: 2px solid @scheme-color-8;
+    border: 2px solid @formText;
   }
 
   &__note {
     font-size: 14px;
     line-height: 21px;
-    color: @scheme-color-8;
+    color: @txtContent;
   }
 
   &__btn {

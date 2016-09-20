@@ -1,23 +1,31 @@
 .main-nav {
   &__items {
+    min-width: @min-width;
     margin: 0;
     padding: 0;
+
     list-style: none;
-    min-width: @min-width;
 
     @media @tablet {
-      display: flex;
       flex-wrap: wrap;
+
+      display: flex;
     }
   }
 
   &__item {
-    background-color: @scheme-color-1;
+    .set-up-bottom-shadow();
+    background-color: @navBackground;
+    min-height: 79px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     &--novelty {
-      display: none;
-      background: none;
       font-size: 15px;
+
+      display: none;
+
+      background: none;
 
       @media @desktop {
         display: block;
@@ -25,9 +33,11 @@
     }
 
     &--sales {
-      display: none;
-      background: none;
       font-size: 15px;
+
+      display: none;
+
+      background: none;
 
       @media @desktop {
         display: block;
@@ -36,56 +46,64 @@
   }
 
   &__link {
-    .set-up-bottom-shadow();
     .set-wrapper-padding();
 
     font-size: 17px;
     font-weight: bold;
     line-height: 24px;
-    padding-top: 27px;
-    padding-bottom: 27px;
+
     position: relative;
 
     display: block;
 
-    min-height: 79px;
+    // min-height: 79px;
+    // padding-top: 27px;
+    // padding-bottom: 27px;
 
     text-decoration: none;
 
-    color: @scheme-color-2;
+    color: @navText;
 
     @media @tablet {
       min-height: 88px;
       padding-top: 31px;
       padding-bottom: 31px;
     }
+
+    &--cart {
+      @media @tablet {
+        align-items: center;
+
+        display: flex;
+      }
+    }
   }
 
   &__icon {
-    display: block;
     position: absolute;
+    top: 2px;
+    left: -38px;
+
     opacity: 0.2;
 
     @media @tablet {
-      position: relative;
-      display: inline-block;
-      left: 0;
+      position: static;
     }
   }
 
   &__wrapper {
     .center();
-    width: 185px;
+
+    position: relative;
+
     display: block;
+
+    width: 185px;
 
     &--hidden {
       @media @tablet {
         display: none;
       }
-    }
-
-    &--cart {
-      margin-left: 31px;
     }
   }
 }

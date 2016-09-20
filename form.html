@@ -8,10 +8,12 @@
   </head>
   <body class="inner-page">
     <header class="page-header">
-      <div class="page-header__wrapper  page-header__wrapper--table">
-        <a class="page-header__logo"  href="index.html"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
-        <div class="page-header__toggle-wrapper">
-          <a class="page-header__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
+      <div class="page-header__wrapper">
+        <div class="page-header__container page-header__container--table">
+          <a class="page-header__logo"  href="index.html"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
+          <div class="page-header__toggle-wrapper">
+            <a class="page-header__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
+        </div>
         </div>
       </div>
       <nav class="main-nav">
@@ -26,16 +28,20 @@
               <span class="main-nav__wrapper">Вязание на заказ</span>
             </a>
           </li>
-          <li class="main-nav__item--search">
-            <a class="main-nav__link" href="#">
-              <span class="main-nav__icon"><img src="img/icons/icon-search.svg" alt="Поиск"></span>
-              <span class="main-nav__wrapper main-nav__wrapper--hidden">Поиск по сайту</span>
+          <li class="main-nav__item  main-nav__item--search">
+            <a class="main-nav__link  main-nav__link--search" href="#">
+              <span class="main-nav__wrapper">
+                <img class="main-nav__icon" src="img/icons/icon-search.svg" alt="Поиск">
+                <span class="main-nav__wrapper  main-nav__wrapper--search  main-nav__wrapper--hidden">Поиск по сайту</span>
+              </span>
             </a>
           </li>
-          <li class="main-nav__item--cart">
-            <a class="main-nav__link" href="#">
-              <span class="main-nav__icon"><img src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" ></span>
-              <span class="main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+          <li class="main-nav__item  main-nav__item--cart">
+            <a class="main-nav__link  main-nav__link--cart" href="#">
+              <span class="main-nav__wrapper">
+                <img class= "main-nav__icon" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
+                <span class="main-nav__wrapper  main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+              </span>
             </a>
           </li>
           <li class="main-nav__item  main-nav__item--novelty">
@@ -50,7 +56,7 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__wrapper page-header__wrapper--title">
+      <div class="page-header__wrapper  page-header__wrapper--title">
         <h1 class="page-header__title">Вязание на заказ</h1>
       </div>
     </header>
@@ -84,7 +90,7 @@
               </li>
               <li class="form-order__item">
                 <input type="checkbox" id="tiffani" class="form-order__filter  form-order__filter--checkbox">
-                <label for="tiffani" class="form-order__label form-order__label--checkbox">"Тиффани"</label>
+                <label for="tiffani" class="form-order__label  form-order__label--checkbox">"Тиффани"</label>
               </li>
               <li class="form-order__item">
                 <input type="checkbox" id="black" class="form-order__filter  form-order__filter--checkbox">

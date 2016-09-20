@@ -8,14 +8,16 @@
   </head>
   <body class="main-page">
     <header class="page-header">
-      <div class="page-header__wrapper  page-header__wrapper--table">
-        <a class="page-header__logo  page-header__logo--active"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
-        <div class="page-header__toggle-wrapper">
-          <a class="page-header__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
-        </div>
-      </div>
       <nav class="main-nav">
         <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <div class="page-header__container page-header__container--table">
+              <a class="page-header__logo  page-header__logo--active"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
+              <div class="page-header__toggle-wrapper">
+                <a class="page-header__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
+            </div>
+            </div>
+          </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">
               <span class="main-nav__wrapper">Каталог товаров</span>
@@ -26,16 +28,20 @@
               <span class="main-nav__wrapper">Вязание на заказ</span>
             </a>
           </li>
-          <li class="main-nav__item--search">
-            <a class="main-nav__link" href="#">
-              <span class="main-nav__icon"><img src="img/icons/icon-search.svg" alt="Поиск"></span>
-              <span class="main-nav__wrapper main-nav__wrapper--hidden">Поиск по сайту</span>
+          <li class="main-nav__item  main-nav__item--search">
+            <a class="main-nav__link  main-nav__link--search" href="#">
+              <span class="main-nav__wrapper">
+                <img class="main-nav__icon" src="img/icons/icon-search.svg" alt="Поиск">
+                <span class="main-nav__wrapper  main-nav__wrapper--search  main-nav__wrapper--hidden">Поиск по сайту</span>
+              </span>
             </a>
           </li>
-          <li class="main-nav__item--cart">
-            <a class="main-nav__link" href="#">
-              <span class="main-nav__icon"><img src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" ></span>
-              <span class="main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+          <li class="main-nav__item  main-nav__item--cart">
+            <a class="main-nav__link  main-nav__link--cart" href="#">
+              <span class="main-nav__wrapper">
+                <img class= "main-nav__icon" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
+                <span class="main-nav__wrapper  main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+              </span>
             </a>
           </li>
           <li class="main-nav__item  main-nav__item--novelty">

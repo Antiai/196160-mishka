@@ -18,13 +18,13 @@
 
     text-align: center;
 
-    color: @scheme-color-8;
+    color: @formText;
   }
 
   &__select {
     display: none;
     &:checked + label {
-      border-color: @scheme-color-6;
+      border-color: @formSizeCheckedBorder;
     }
   }
 
@@ -41,8 +41,8 @@
 
     vertical-align: middle;
 
-    color: @scheme-color-8;
-    border-color: @scheme-color-transparent-4;
+    color: @formText;
+    border-color: fade(@formSizeBorder, 10%);
 
     &:not(:last-child) {
       margin-right: 2.69%;
@@ -54,8 +54,8 @@
 
     width: 100%;
 
-    color: @scheme-color-1;
+    color: @btnCartAddText;
     border: none;
-    background-color: @scheme-color-6;
+    background-color: @btnCartAddBackground;
   }
 }

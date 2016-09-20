@@ -23,9 +23,9 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  color: @scheme-color-8;
-  border: 2px solid @scheme-color-8;
-  background-color: @scheme-color-1;
+  color: @btnText;
+  border: 2px solid @btnBorder;
+  background-color: @btnBackground;
 }
 
 .center() {
@@ -41,18 +41,18 @@
 }
 
 .set-wrapper-padding() {
-  padding-right: 9.375%;
-  padding-left: 9.375%;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @media @tablet {
-    padding-left: 50px;
     padding-right: 50px;
+    padding-left: 50px;
   }
 }
 
 .set-up-bottom-shadow {
-  box-shadow: 0 1px @very-light-gray,
-  inset 0 1px @very-light-gray;
+  box-shadow: 0 1px @navBorder,
+                        inset 0 1px @navBorder;
 }
 
 .set-box() {
@@ -66,5 +66,5 @@
 
   content: "";
 
-  border: 2px solid @scheme-color-8;
+  border: 2px solid @formFilterBorder;
 }

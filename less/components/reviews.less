@@ -1,8 +1,9 @@
 .reviews {
-  padding-top: 8px;
   min-width: @min-width;
+  padding-top: 8px;
   padding-bottom: 44px;
-  border-bottom: 3px solid @scheme-color-5;
+
+  border-bottom: 3px solid @contentDivider;
 
   &__wrapper {
     .set-wrapper-padding();
@@ -11,59 +12,70 @@
   &__title {
     font-size: 25px;
     line-height: 30px;
+
     margin-bottom: 30px;
   }
 
   &__content {
     font-size: 15px;
     line-height: 30px;
-    color: @scheme-color-8;
+
+    color: @txtContent;
   }
 
   &__author {
     font-size: 18px;
-    line-height: 24px;
     font-weight: bold;
+    line-height: 24px;
+
     margin-bottom: 8px;
   }
 
   &__social-profile {
     font-size: 18px;
     line-height: 30px;
+
     margin-top: 0;
   }
 
   &__btn-set {
     display: table;
+
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 38px;
+
+    border-collapse: collapse;
   }
 
   &__btn {
     .btn();
+
     cursor: pointer;
 
     &--prev {
       display: table-cell;
+
       width: 50%;
-      border-color: @scheme-color-4;
+
       border-width: 1px;
+      border-color: @btnReviewsBorder;
       border-right: none;
     }
 
     &--next {
       display: table-cell;
+
       width: 50%;
-      border-color: @scheme-color-4;
+
       border-width: 1px;
+      border-color: @btnReviewsBorder;
     }
 
     &--write {
       font-size: 18px;
       line-height: 18px;
+
       padding: 15px;
     }
   }
-
 }
