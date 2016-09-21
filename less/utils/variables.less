@@ -1,15 +1,27 @@
 // BREAKPOINTS
-@min-width: 320px;
-@max-width: 340px; //center mobile content
-@tablet-width: 768px;
-@desktop-width: 1200px;
+@tabletWidth: 768px;
+@desktopWidth: 1200px;
 
 // MEDIA CONDITIONS
-@tablet: ~"screen and (min-width: @{tablet-width})";
-@desktop: ~"screen and (min-width: @{desktop-width})";
+@tablet: ~"screen and (min-width: @{tabletWidth})";
+@desktop: ~"screen and (min-width: @{desktopWidth})";
+
+// key widths
+@minWidth: 320px;
+@maxWidth: 340px; //center mobile content
+@tabletMaxWidth: 800px; //center desktop content
+
+// main menu heights
+@minHeight: 79px;
+@tabletMinHeight: 89px;
+
+
+// paddings
+@mobilePadding: 30px;
+@tabletPadding: 50px;
+@desktopPadding: 50px;
 
 // #colors
-
 @white: #fff;
 @black: #000;
 @veryDarkRed: #221f1f;

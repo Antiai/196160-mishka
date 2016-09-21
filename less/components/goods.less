@@ -1,4 +1,9 @@
 .goods {
+  .set-wrapper-padding();
+  .center();
+
+  min-width: @minWidth;
+  max-width: @maxWidth;
   margin-top: 30px;
   margin-bottom: 30px;
 
@@ -26,6 +31,7 @@
 
     &:last-child {
       display: table;
+
       width: 100%;
     }
   }
@@ -54,17 +60,22 @@
 
   &__price {
     font-size: 15px;
-    line-height: 24px;
     font-weight: bold;
+    line-height: 24px;
+
     display: table-cell;
+
     vertical-align: middle;
   }
 
   &__cart-link {
     display: table-cell;
-    text-align: right;
+
     padding-top: 22px;
     padding-bottom: 22px;
+
+    text-align: right;
+
     opacity: 0.2;
   }
 }

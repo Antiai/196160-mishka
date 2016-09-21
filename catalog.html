@@ -8,51 +8,43 @@
   </head>
   <body class="inner-page">
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <div class="page-header__container  page-header__container--table">
-          <a class="page-header__logo"  href="index.html"><img src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
-          <div class="page-header__toggle-wrapper">
-            <a class="page-header__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
-        </div>
-        </div>
-      </div>
       <nav class="main-nav">
         <ul class="main-nav__items">
-          <li class="main-nav__item">
-            <a class="main-nav__link  main-nav__link--active">
-              <span class="main-nav__wrapper">Каталог товаров</span>
-            </a>
+          <li class="main-nav__item  main-nav__item--logo">
+            <a href="index.html" class="main-nav__logo"><img class="main-nav__logo-image" src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
+            <a class="main-nav__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">
-              <span class="main-nav__wrapper">Вязание на заказ</span>
-            </a>
+            <span class="main-nav__wrapper">
+              <a class="main-nav__link  main-nav__link--active">Каталог товаров</a>
+            </span>
+          </li>
+          <li class="main-nav__item">
+            <span class="main-nav__wrapper">
+              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+            </span>
           </li>
           <li class="main-nav__item  main-nav__item--search">
-            <a class="main-nav__link  main-nav__link--search" href="#">
-              <span class="main-nav__wrapper">
+            <span class="main-nav__wrapper">
+              <a class="main-nav__link  main-nav__link--search" href="#">
                 <img class="main-nav__icon" src="img/icons/icon-search.svg" alt="Поиск">
-                <span class="main-nav__wrapper  main-nav__wrapper--search  main-nav__wrapper--hidden">Поиск по сайту</span>
-              </span>
-            </a>
+                <span class="main-nav__search">Поиск по сайту</span>
+              </a>
+            </span>
           </li>
           <li class="main-nav__item  main-nav__item--cart">
-            <a class="main-nav__link  main-nav__link--cart" href="#">
-              <span class="main-nav__wrapper">
+            <span class="main-nav__wrapper">
+              <a class="main-nav__link  main-nav__link--cart" href="#">
                 <img class= "main-nav__icon" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
-                <span class="main-nav__wrapper  main-nav__wrapper--cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
-              </span>
-            </a>
+                <span class="main-nav__cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
+              </a>
+            </span>
           </li>
           <li class="main-nav__item  main-nav__item--novelty">
-            <a class="main-nav__link" href="#">
-              <span class="main-nav__wrapper">Новые поступления</span>
-            </a>
+            <span class="main-nav__wrapper"><a class="main-nav__link" href="#">Новые поступления</a></span>
           </li>
           <li class="main-nav__item  main-nav__item--sales">
-            <a class="main-nav__link" href="#">
-              <span class="main-nav__wrapper">Распродажа</span>
-            </a>
+            <span class="main-nav__wrapper"><a class="main-nav__link" href="#">Распродажа</a></span>
           </li>
         </ul>
       </nav>
@@ -62,73 +54,73 @@
     </header>
     <main>
       <section class="catalog">
+        <article class="goods">
+          <a href="#" class="goods__link">
+            <figure class="goods__photo">
+              <img src="img/goods/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+            </figure>
+          </a>
+          <div class="goods__content">
+            <div class="goods__container">
+              <h2 class="goods__title">
+                <a href="#" class="goods__link">Зайчик-попрыгайчик</a>
+              </h2>
+              <p class="goods__description">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="goods__container">
+              <p class="goods__price">1200 руб.</p>
+              <a href="#" class="goods__cart-link">
+                <img src="img/icons/icon-cart.svg" alt="Добавить в корзину">
+                <span class="visually-hide">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="goods">
+          <a href="#" class="goods__link">
+            <figure class="goods__photo">
+              <img src="img/goods/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+            </figure>
+          </a>
+          <div class="goods__content">
+            <div class="goods__container">
+              <h2 class="goods__title">
+                <a href="#" class="goods__link">Корзинка для белья</a>
+              </h2>
+              <p class="goods__description">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="goods__container">
+              <p class="goods__price">690 руб.</p>
+              <a href="#" class="goods__cart-link">
+                <img src="img/icons/icon-cart.svg" alt="Добавить в корзину">
+                <span class="visually-hide">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="goods">
+          <a href="#" class="goods__link">
+            <figure class="goods__photo">
+              <img src="img/goods/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+            </figure>
+          </a>
+          <div class="goods__content">
+            <div class="goods__container">
+              <h2 class="goods__title">
+                <a href="#" class="goods__link">Большая корзинка для игрушек</a>
+              </h2>
+              <p class="goods__description">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="goods__container">
+              <p class="goods__price">1500 руб.</p>
+              <a href="#" class="goods__cart-link">
+                <img src="img/icons/icon-cart.svg" alt="Добавить в корзину">
+                <span class="visually-hide">Добавить в корзину</span>
+              </a>
+            </div>
+          </div>
+        </article>
         <div class="catalog__wrapper">
-          <article class="goods">
-            <a href="#" class="goods__link">
-              <figure class="goods__photo">
-                <img src="img/goods/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="265" height="195">
-              </figure>
-            </a>
-            <div class="goods__content">
-              <div class="goods__container">
-                <h2 class="goods__title">
-                  <a href="#" class="goods__link">Зайчик-попрыгайчик</a>
-                </h2>
-                <p class="goods__description">Рост 30 см, вес 200 г</p>
-              </div>
-              <div class="goods__container">
-                <p class="goods__price">1200 руб.</p>
-                <a href="#" class="goods__cart-link">
-                  <img src="img/icons/icon-cart.svg" alt="Добавить в корзину">
-                  <span class="visually-hide">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="goods">
-            <a href="#" class="goods__link">
-              <figure class="goods__photo">
-                <img src="img/goods/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="265" height="195">
-              </figure>
-            </a>
-            <div class="goods__content">
-              <div class="goods__container">
-                <h2 class="goods__title">
-                  <a href="#" class="goods__link">Корзинка для белья</a>
-                </h2>
-                <p class="goods__description">Диаметр 15 см, высота 10 см</p>
-              </div>
-              <div class="goods__container">
-                <p class="goods__price">690 руб.</p>
-                <a href="#" class="goods__cart-link">
-                  <img src="img/icons/icon-cart.svg" alt="Добавить в корзину">
-                  <span class="visually-hide">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="goods">
-            <a href="#" class="goods__link">
-              <figure class="goods__photo">
-                <img src="img/goods/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="265" height="195">
-              </figure>
-            </a>
-            <div class="goods__content">
-              <div class="goods__container">
-                <h2 class="goods__title">
-                  <a href="#" class="goods__link">Большая корзинка для игрушек</a>
-                </h2>
-                <p class="goods__description">Диаметр 30 см, высота 30 см</p>
-              </div>
-              <div class="goods__container">
-                <p class="goods__price">1500 руб.</p>
-                <a href="#" class="goods__cart-link">
-                  <img src="img/icons/icon-cart.svg" alt="Добавить в корзину">
-                  <span class="visually-hide">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
-          </article>
           <article class="manufacture">
             <div class="manufacture__wrapper">
               <div class="manufacture__container">

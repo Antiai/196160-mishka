@@ -1,11 +1,13 @@
 .page-footer {
   background-color: @footerBackground;
   width: 100%;
-  min-width: @min-width;
+  min-width: @minWidth;
 
   &__wrapper {
     .set-wrapper-padding();
+    .center();
 
-    min-width: @min-width;
+    min-width: @minWidth;
+    max-width: @maxWidth;
   }
 }

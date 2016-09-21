@@ -41,18 +41,18 @@
 }
 
 .set-wrapper-padding() {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: @mobilePadding;
+  padding-left: @mobilePadding;
 
   @media @tablet {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: @tabletPadding;
+    padding-left: @tabletPadding;
   }
-}
 
-.set-up-bottom-shadow {
-  box-shadow: 0 1px @navBorder,
-                        inset 0 1px @navBorder;
+  @media @desktop {
+    padding-right: @desktopPadding;
+    padding-left: @desktopPadding;
+  }
 }
 
 .set-box() {

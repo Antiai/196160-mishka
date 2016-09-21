@@ -1,31 +1,131 @@
 .main-nav {
+  @media @tablet {
+    .center();
+
+    max-width: @tabletMaxWidth;
+  }
+
+  @media @tablet {
+    max-width: @desktopWidth;
+  }
+
   &__items {
-    min-width: @min-width;
+    .set-wrapper-padding();
+
+    min-width: @minWidth;
     margin: 0;
     padding: 0;
 
     list-style: none;
 
+    box-shadow: inset 0 1px @navBorder;
+
     @media @tablet {
       flex-wrap: wrap;
 
       display: flex;
+
+      width: 100%;
     }
   }
 
   &__item {
-    .set-up-bottom-shadow();
+    position: relative;
+
+    min-height: @minHeight;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
     background-color: @navBackground;
-    min-height: 79px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    box-shadow: 0 1px @navBorder,
+    inset 0 1px @navBorder;
+
+    @media @tablet {
+      min-height: @tabletMinHeight;
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      background: none;
+      box-shadow: none;
+    }
+
+    &--logo {
+      .center();
+
+      position: relative;
+
+      min-width: @minWidth;
+      max-width: @maxWidth;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      text-align: center;
+
+      @media @tablet {
+        flex-basis: 45.2%;
+
+        min-width: 0;
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+
+        text-align: left;
+      }
+    }
+
+    &--catalog {
+      @media @tablet {
+        order: 2;
+
+        width: 25%;
+        padding-top: 20px;
+      }
+
+      @media @desktop {
+        padding-top: 32px;
+      }
+    }
+
+    &--form {
+      @media @tablet {
+        order: 2;
+
+        width: 25%;
+        padding-top: 20px;
+      }
+
+      @media @desktop {
+        padding-top: 32px;
+      }
+    }
+
+    &--search {
+      @media @tablet {
+        width: 12.15%;
+
+        text-align: center;
+
+        border-right: 1px solid @navBorder;
+        border-left: 1px solid @navBorder;
+        background: none;
+      }
+    }
+
+    &--cart {
+      @media @tablet {
+        order: 1;
+
+        width: 42.65%;
+
+        text-align: right;
+      }
+    }
 
     &--novelty {
-      font-size: 15px;
-
       display: none;
 
       background: none;
+      box-shadow: none;
 
       @media @desktop {
         display: block;
@@ -33,11 +133,10 @@
     }
 
     &--sales {
-      font-size: 15px;
-
       display: none;
 
       background: none;
+      box-shadow: none;
 
       @media @desktop {
         display: block;
@@ -45,36 +144,83 @@
     }
   }
 
-  &__link {
-    .set-wrapper-padding();
+  &__toggle {
+    position: absolute;
+    right: 0;
 
+    width: 20px;
+    height: 14px;
+    margin-top: 10px;
+
+    background-color: transparent;
+    box-shadow: inset 0 2px @btnMenuToggle;
+
+    @media @tablet {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 6px;
+      right: 0;
+
+      width: 20px;
+      height: 2px;
+
+      content: "";
+
+      background-color: @btnMenuToggle;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 20px;
+      height: 2px;
+
+      content: "";
+
+      background-color: @btnMenuToggle;
+    }
+  }
+
+  &__link {
     font-size: 17px;
     font-weight: bold;
     line-height: 24px;
-
-    position: relative;
-
-    display: block;
-
-    // min-height: 79px;
-    // padding-top: 27px;
-    // padding-bottom: 27px;
 
     text-decoration: none;
 
     color: @navText;
 
     @media @tablet {
-      min-height: 88px;
-      padding-top: 31px;
-      padding-bottom: 31px;
     }
 
     &--cart {
       @media @tablet {
         align-items: center;
 
-        display: flex;
+        position: relative;
+
+        text-align: right;
+      }
+    }
+
+    &--small-tab {
+      @media @tablet {
+        font-size: 15px;
+      }
+
+      @media @desktop {
+        font-size: 17px;
+      }
+    }
+
+    &--small-desk {
+      @media @desktop {
+        font-size: 15px;
       }
     }
   }
@@ -100,10 +246,22 @@
 
     width: 185px;
 
-    &--hidden {
-      @media @tablet {
-        display: none;
-      }
+    @media @tablet {
+      display: inline;
+
+      width: auto;
+    }
+  }
+
+  &__search {
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &__cart {
+    @media @tablet {
+      margin-left: 31px;
     }
   }
 }

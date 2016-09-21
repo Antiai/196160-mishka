@@ -1,5 +1,4 @@
 .reviews {
-  min-width: @min-width;
   padding-top: 8px;
   padding-bottom: 44px;
 
@@ -7,6 +6,10 @@
 
   &__wrapper {
     .set-wrapper-padding();
+    .center();
+
+    min-width: @minWidth;
+    max-width: @maxWidth;
   }
 
   &__title {
@@ -43,8 +46,6 @@
 
     width: 100%;
     margin-bottom: 38px;
-
-    border-collapse: collapse;
   }
 
   &__btn {
@@ -56,6 +57,8 @@
       display: table-cell;
 
       width: 50%;
+      padding-top: 10px;
+      padding-bottom: 11px;
 
       border-width: 1px;
       border-color: @btnReviewsBorder;
@@ -66,6 +69,8 @@
       display: table-cell;
 
       width: 50%;
+      padding-top: 10px;
+      padding-bottom: 11px;
 
       border-width: 1px;
       border-color: @btnReviewsBorder;

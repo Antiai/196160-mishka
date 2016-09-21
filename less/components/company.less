@@ -1,23 +1,27 @@
 .company {
-  min-width: @min-width;
   padding-top: 14px;
   padding-bottom: 35px;
 
   &__wrapper {
     .set-wrapper-padding();
-
+    .center();
+    min-width: @minWidth;
+    max-width: @maxWidth;
   }
 
   &__title {
     font-size: 25px;
     line-height: 30px;
+
     margin-bottom: 31px;
   }
 
   &__features {
-    list-style: none;
-    padding-left: 0;
     font-weight: bold;
+
+    padding-left: 0;
+
+    list-style: none;
   }
 
   &__advantage {

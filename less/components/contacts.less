@@ -1,9 +1,13 @@
 .contacts {
-  min-width: @min-width;
+  min-width: @minWidth;
   padding-top: 22px;
 
   &__wrapper {
     .set-wrapper-padding();
+    .center();
+
+    min-width: @minWidth;
+    max-width: @maxWidth;
   }
 
   &__title {
@@ -13,7 +17,6 @@
 
   &__items {
     display: table;
-    // width: 100%;
   }
 
   &__item {

@@ -1,21 +1,24 @@
 .pop-up {
-  min-width: @min-width;
+  min-width: @minWidth;
 
   &__wrapper {
     .set-wrapper-padding();
+    .center();
 
+    min-width: @minWidth;
+    max-width: @maxWidth;
+    padding-top: 35px;
     padding-bottom: 46px;
 
-    border-top: 1px solid @popupBorder;
-    border-bottom: 1px solid @popupBorder;
-    box-shadow: 0 5 10 fade(@popupShadow, 25%);
+    outline: 1px solid @popupBorder;
+    box-shadow: 0 5px 10px fade(@popupShadow, 25%);
   }
 
   &__title {
     font-size: 25px;
     line-height: 30px;
 
-    margin-top: 28px;
+    margin-top: 0;
     margin-bottom: 18px;
     padding-right: 22%;
     padding-left: 22%;
