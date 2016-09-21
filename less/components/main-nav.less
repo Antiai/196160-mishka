@@ -62,7 +62,7 @@
       text-align: center;
 
       @media @tablet {
-        flex-basis: 45.2%;
+        width: 45.2%;
 
         min-width: 0;
         max-width: none;
@@ -70,6 +70,12 @@
         margin-left: 0;
 
         text-align: left;
+      }
+
+      @media @desktop {
+        order: 1;
+        width: 30.95%;
+        text-align: center;
       }
     }
 
@@ -83,6 +89,9 @@
 
       @media @desktop {
         padding-top: 32px;
+        order: 0;
+        border-right: 1px solid @navBorder;
+        width: 185px;
       }
     }
 
@@ -96,6 +105,9 @@
 
       @media @desktop {
         padding-top: 32px;
+        order: 0;
+        width: 190px;
+        text-align: right;
       }
     }
 
@@ -109,6 +121,11 @@
         border-left: 1px solid @navBorder;
         background: none;
       }
+
+      @media @desktop {
+        order: 1;
+        width: 84px;
+      }
     }
 
     &--cart {
@@ -118,6 +135,10 @@
         width: 42.65%;
 
         text-align: right;
+      }
+
+      @media @desktop {
+        width: 25.33%;
       }
     }
 
@@ -129,6 +150,8 @@
 
       @media @desktop {
         display: block;
+        order: 2;
+        padding-top: 20px;
       }
     }
 
@@ -140,6 +163,8 @@
 
       @media @desktop {
         display: block;
+        order: 2;
+        padding-top: 20px;
       }
     }
   }
