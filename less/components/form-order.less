@@ -1,10 +1,7 @@
 .form-order {
-  padding-bottom: 55px;
   .set-wrapper-padding();
-  .center();
 
-  min-width: @minWidth;
-  max-width: @maxWidth;
+  padding-bottom: 55px;
 
   &__description {
     font-size: 13px;
@@ -132,9 +129,11 @@
 
     &--icon {
       position: absolute;
-      right: 0;
       top: 27px;
+      right: 0;
+
       transform: translateY(-50%);
+
       opacity: 0.2;
     }
   }
@@ -159,12 +158,15 @@
     width: 100%;
     padding: 15px;
 
+    resize: vertical;
+
     border: 2px solid @formText;
   }
 
   &__note {
     font-size: 14px;
     line-height: 21px;
+
     color: @txtContent;
   }
 

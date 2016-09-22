@@ -1,14 +1,18 @@
 .catalog-parts {
-  min-width: @minWidth;
   margin: 0;
   padding: 0;
 
   list-style: none;
 
-
+  @media @tablet {
+    display: flex;
+    justify-content: center;
+  }
 
   &__item {
-    min-width: @minWidth;
+    @media @tablet {
+      width: 50%;
+    }
 
     &:first-child {
       background-color: @linkFirstBackground;
@@ -20,7 +24,8 @@
   }
 
   &__link {
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 
     .set-wrapper-padding();
 
@@ -28,30 +33,32 @@
 
     display: flex;
 
-    width: 100%;
     min-height: 103px;
 
     text-decoration: none;
 
     color: @linkColor;
+
+    @media @tablet {
+      min-height: 119px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
   }
 
   &__title {
-    width: 50%;
-    max-width: @maxWidth/2-@mobilePadding;
-    padding-top: 18px;
-    padding-right: 10px;
-    padding-bottom: 17px;
+    font-size: 19px;
+    line-height: 24px;
+
+    width: 130px;
+
+    @media @tablet {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &__icon-wrapper {
-    width: 50%;
-    max-width: @maxWidth/2-@mobilePadding;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-top: 23px;
-    padding-bottom: 15px;
-
     text-align: right;
   }
 

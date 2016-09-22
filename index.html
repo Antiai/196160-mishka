@@ -20,7 +20,7 @@
             </span>
           </li>
           <li class="main-nav__item  main-nav__item--form">
-            <span class="main-nav__wrapper">
+            <span class="main-nav__wrapper  main-nav__wrapper--form">
               <a href ="form.html" class="main-nav__link  main-nav__link--small-tab">Вязание на заказ</a>
             </span>
           </li>
@@ -33,9 +33,9 @@
             </span>
           </li>
           <li class="main-nav__item  main-nav__item--cart">
-            <span class="main-nav__wrapper">
+            <span class="main-nav__wrapper  main-nav__wrapper--cart">
               <a class="main-nav__link  main-nav__link--cart" href="#">
-                <img class= "main-nav__icon" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
+                <img class= "main-nav__icon  main-nav__icon--cart" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
                 <span class="main-nav__cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
               </a>
             </span>
@@ -44,13 +44,13 @@
             <span class="main-nav__wrapper"><a class="main-nav__link  main-nav__link--small-desk" href="#">Новые поступления</a></span>
           </li>
           <li class="main-nav__item  main-nav__item--sales">
-            <span class="main-nav__wrapper"><a class="main-nav__link  main-nav__link--small-desk" href="#">Распродажа</a></span>
+            <span class="main-nav__wrapper  main-nav__wrapper--sales"><a class="main-nav__link  main-nav__link--small-desk" href="#">Распродажа</a></span>
           </li>
         </ul>
       </nav>
       <div class="page-header__wrapper  page-header__wrapper--index">
         <p class="page-header__note">Бесплатная доставка по России</p>
-        <h1 class="page-header__title">Милые штуки ручной<br>работы для дома</h1>
+        <h1 class="page-header__title  page-header__title--index">Милые штуки ручной<br>работы для дома</h1>
       </div>
       <ul class="catalog-parts">
         <li class="catalog-parts__item">
@@ -74,26 +74,28 @@
             <h2 class="product__title">Вязаные корзинки</h2>
             <p class="product__trait"><strong>Товар недели</strong></p>
           </div>
-          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="table">
-            <tr class="table__row">
-              <td class="table__cell">Цвет:</td>
-              <td class="table__cell">"Тиффани"/серый</td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__cell">Диаметр:</td>
-              <td class="table__cell">25 см</td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__cell">Высота:</td>
-              <td class="table__cell">15 см</td>
-            </tr>
-          </table>
-          <figure class="product__photo">
-            <img src="img/goods/triple-set-mobile@1x.jpg" alt="Вязаная корзинка" width="260" height="315">
-          </figure>
-          <p class="product__price">Цена: 990 руб.</p>
-          <a href="#" class="product__btn-buy">Заказать</a>
+          <div class="product__wrapper product__wrapper--content">
+            <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="table">
+              <tr class="table__row">
+                <td class="table__cell">Цвет:</td>
+                <td class="table__cell">"Тиффани"/серый</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell">Диаметр:</td>
+                <td class="table__cell">25 см</td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell">Высота:</td>
+                <td class="table__cell">15 см</td>
+              </tr>
+            </table>
+            <figure class="product__photo">
+              <img src="img/goods/triple-set-mobile@1x.jpg" alt="Вязаная корзинка" width="260" height="315">
+            </figure>
+            <p class="product__price">Цена: 990 руб.</p>
+            <a href="#" class="product__btn-buy">Заказать</a>
+          </div>
         </article>
       </section>
       <section class="company">

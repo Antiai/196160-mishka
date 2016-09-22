@@ -14,14 +14,14 @@
             <a href="index.html" class="main-nav__logo"><img class="main-nav__logo-image" src="img/logos/logo-mobile.svg" alt="Лого Мишка" width="86" height="35"></a>
             <a class="main-nav__toggle" href="#"><span class="visually-hide">Открыть меню</span></a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item  main-nav__item--catalog">
             <span class="main-nav__wrapper">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--small-tab">Каталог товаров</a>
             </span>
           </li>
-          <li class="main-nav__item">
-            <span class="main-nav__wrapper">
-              <a class="main-nav__link  main-nav__link--active">Вязание на заказ</a>
+          <li class="main-nav__item  main-nav__item--form">
+            <span class="main-nav__wrapper  main-nav__wrapper--form">
+              <a class="main-nav__link  main-nav__link--active  main-nav__link--small-tab">Вязание на заказ</a>
             </span>
           </li>
           <li class="main-nav__item  main-nav__item--search">
@@ -33,22 +33,23 @@
             </span>
           </li>
           <li class="main-nav__item  main-nav__item--cart">
-            <span class="main-nav__wrapper">
+            <span class="main-nav__wrapper  main-nav__wrapper--cart">
               <a class="main-nav__link  main-nav__link--cart" href="#">
-                <img class= "main-nav__icon" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
+                <img class= "main-nav__icon  main-nav__icon--cart" src="img/icons/icon-cart.svg" width="21" height="19" alt="Корзина" >
                 <span class="main-nav__cart">Корзина: <span class="goods-quantity">пока пуста</span></span>
               </a>
             </span>
           </li>
           <li class="main-nav__item  main-nav__item--novelty">
-            <span class="main-nav__wrapper"><a class="main-nav__link" href="#">Новые поступления</a></span>
+            <span class="main-nav__wrapper"><a class="main-nav__link  main-nav__link--small-desk" href="#">Новые поступления</a></span>
           </li>
           <li class="main-nav__item  main-nav__item--sales">
-            <span class="main-nav__wrapper"><a class="main-nav__link" href="#">Распродажа</a></span>
+            <span class="main-nav__wrapper  main-nav__wrapper--sales"><a class="main-nav__link  main-nav__link--small-desk" href="#">Распродажа</a></span>
           </li>
         </ul>
       </nav>
       <div class="page-header__wrapper  page-header__wrapper--title">
+        <p class="page-header__note">Бесплатная доставка по России</p>
         <h1 class="page-header__title">Вязание на заказ</h1>
       </div>
     </header>
