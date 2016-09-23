@@ -40,11 +40,30 @@
   content: "";
 }
 
-.set-wrapper-padding() {
-  padding-right: @mobilePadding;
-  padding-left: @mobilePadding;
+.set-caption-font-size() {
+  @media @mobileOnly {
+    font-size: 25px;
+    line-height: 30px;
+  }
 
-  @media @tablet {
+  @media @tabletOnly {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media @desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.set-wrapper-padding() {
+  @media @mobileOnly {
+    padding-right: @mobilePadding;
+    padding-left: @mobilePadding;
+  }
+
+  @media @tabletOnly {
     padding-right: @tabletPadding;
     padding-left: @tabletPadding;
   }

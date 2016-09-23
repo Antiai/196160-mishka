@@ -7,6 +7,9 @@
   @media @tablet {
     display: flex;
     justify-content: center;
+    margin-left: @tabletPadding;
+    margin-right: @tabletPadding;
+    margin-top: -@catalogPartsTabletMinHeight;
   }
 
   &__item {
@@ -14,11 +17,11 @@
       width: 50%;
     }
 
-    &:first-child {
+    &--first-color {
       background-color: @linkFirstBackground;
     }
 
-    &:nth-child(2) {
+    &--second-color {
       background-color: @linkSecondBackground;
     }
   }
@@ -33,14 +36,14 @@
 
     display: flex;
 
-    min-height: 103px;
+    min-height: @catalogPartsMinHeight;
 
     text-decoration: none;
 
     color: @linkColor;
 
     @media @tablet {
-      min-height: 119px;
+      min-height: @catalogPartsTabletMinHeight;
       padding-left: 36px;
       padding-right: 36px;
     }

@@ -2,25 +2,44 @@
 @tabletWidth: 768px;
 @desktopWidth: 1150px;
 
+// bound variables
+@tabletBeforeWidth: (@tabletWidth - 1px);
+@desktopBeforeWidth: (@desktopWidth - 1px);
+
 // MEDIA CONDITIONS
 @tablet: ~"screen and (min-width: @{tabletWidth})";
 @desktop: ~"screen and (min-width: @{desktopWidth})";
 
+@mobileOnly: ~"screen and (max-width: @{tabletBeforeWidth})";
+@tabletOnly: ~"screen and (min-width: @{tabletWidth}) and (max-width: @{desktopBeforeWidth})";
+
+// intermediate media conditions
+@mobileIntermediate: ~"screen and (min-width: @{mobileIntermediateWidth})";
+
 // key widths
 @minWidth: 320px;
-@maxWidth: 600px; //center mobile content
+@maxWidth: 700px; //center mobile content
 @tabletMaxWidth: 900px; //center desktop content
 @desktopMaxWidth: 1200px;
+
+// intermediate breakpoints
+@mobileIntermediateWidth: (@minWidth * 2);
 
 // main menu heights
 @minHeight: 79px;
 @tabletMinHeight: 89px;
 
+// catalog parts heights
+@catalogPartsMinHeight: 103px;
+@catalogPartsTabletMinHeight: 119px;
 
 // paddings
 @mobilePadding: 30px;
 @tabletPadding: 50px;
 @desktopPadding: 50px;
+
+// offsets
+@desktopOffset: 175px;
 
 // #colors
 @white: #fff;
