@@ -11,14 +11,27 @@
   }
 
   &__legend {
-    font-size: 15px;
+    text-align: center;
     line-height: 30px;
 
-    margin-bottom: 25px;
-
-    text-align: center;
-
     color: @formText;
+
+    @media @mobileOnly {
+      font-size: 15px;
+
+      margin-bottom: 25px;
+    }
+
+    @media @tablet {
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__select {
@@ -31,21 +44,19 @@
   &__label {
     .btn();
 
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 17px;
-
-    display: inline-block;
-
-    width: 31.16%;
-
-    vertical-align: middle;
-
     color: @formText;
     border-color: fade(@formSizeBorder, 10%);
 
+    @media @mobileOnly {
+      width: 31.16%;
+    }
+
+    @media @tablet {
+      width: 32%;
+    }
+
     &:not(:last-child) {
-      margin-right: 2.69%;
+      margin-right: 7px;
     }
   }
 
@@ -55,7 +66,7 @@
     width: 100%;
 
     color: @btnCartAddText;
-    border: none;
+    border-color: @btnCartAddBackground;
     background-color: @btnCartAddBackground;
   }
 }

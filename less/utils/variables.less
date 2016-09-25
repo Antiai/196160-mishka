@@ -15,6 +15,7 @@
 
 // intermediate media conditions
 @mobileIntermediate: ~"screen and (min-width: @{mobileIntermediateWidth})";
+@mobileIntermediateTablet: ~"screen and (min-width: @{mobileIntermediateWidth}) and (max-width: @{desktopBeforeWidth})";
 
 // key widths
 @minWidth: 320px;
@@ -39,7 +40,12 @@
 @desktopPadding: 50px;
 
 // offsets
+@tabletOffset: 167px;
 @desktopOffset: 175px;
+
+// filter dimensions
+@mobileBox: 40px;
+@tabletBox: 52px;
 
 // #colors
 @white: #fff;

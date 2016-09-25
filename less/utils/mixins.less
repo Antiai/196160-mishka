@@ -75,15 +75,37 @@
 }
 
 .set-box() {
-  position: absolute;
-  top: -10px;
-  left: 0;
-
-  width: 40px;
-  height: 40px;
-  margin-right: 22px;
-
   content: "";
 
   border: 2px solid @formFilterBorder;
+
+  @media @mobileOnly {
+    min-width: @mobileBox;
+    width: @mobileBox;
+    height: @mobileBox;
+    margin-right: 22px;
+  }
+
+  @media @tablet {
+    min-width: @tabletBox;
+    width: @tabletBox;
+    height: @tabletBox;
+    margin-right: 28px;
+  }
+}
+
+.set-placeholder() {
+  &::placeholder {
+    color: fade(@formPlaceholderText, 30%);
+
+    @media @mobileOnly {
+      font-size: 17px;
+      line-height: 18px;
+    }
+
+    @media @tablet {
+      font-size: 19px;
+      line-height: 19px;
+    }
+  }
 }

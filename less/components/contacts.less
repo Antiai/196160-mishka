@@ -8,12 +8,13 @@
   }
 
   @media @desktop {
-    margin-top: 71px;
-    padding-top: 62px;
     position: relative;
-    margin-left: @desktopPadding;
+
+    margin-top: 71px;
     margin-right: @desktopPadding;
     margin-right: 50%;
+    margin-left: @desktopPadding;
+    padding-top: 62px;
   }
 
   &__wrapper {
@@ -43,6 +44,10 @@
     &--align-top {
       @media @tablet {
         align-items: flex-start;
+      }
+
+      @media @desktop {
+        padding-right: @desktopPadding;
       }
     }
 
@@ -101,8 +106,8 @@
     }
 
     @media @desktop {
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
     }
   }
 
@@ -124,6 +129,7 @@
     @media @tablet {
       font-size: 17px;
       line-height: 30px;
+
       margin-top: 35px;
     }
 
@@ -171,6 +177,7 @@
       position: absolute;
       top: 0;
       right: -100%;
+
       width: 100%;
     }
   }
@@ -185,14 +192,13 @@
 
     @media @tablet {
       width: 230px;
-
       margin-right: auto;
       margin-bottom: 57px;
     }
 
     @media @tabletOnly {
+      margin-top: 55px;
       margin-left: auto;
-            margin-top: 55px;
     }
 
     @media @desktop {
