@@ -1,26 +1,43 @@
 .pop-up {
-  min-width: @min-width;
-
   &__wrapper {
-    .set-wrapper-padding();
-
+    .center();
+    padding-top: 35px;
     padding-bottom: 46px;
 
-    border-top: 1px solid @scheme-color-9;
-    border-bottom: 1px solid @scheme-color-9;
-    box-shadow: 0 5 10 @scheme-color-transparent-1;
+    outline: 1px solid @popupBorder;
+    box-shadow: 0 5px 10px fade(@popupShadow, 25%);
+    max-width: 566px;
+    min-height: 336px;
+
+    @media @mobileOnly {
+      padding-left: @mobilePadding;
+      padding-right: @mobilePadding;
+    }
+
+    @media @tablet {
+      padding-left: 106px;
+      padding-right: 106px;
+      padding-top: 37px;
+    }
   }
 
   &__title {
-    font-size: 25px;
-    line-height: 30px;
+    margin-top: 0;
 
-    margin-top: 28px;
-    margin-bottom: 18px;
-    padding-right: 22%;
-    padding-left: 22%;
 
     text-align: center;
     text-transform: uppercase;
+
+    @media @mobileOnly {
+      font-size: 25px;
+      line-height: 30px;
+          margin-bottom: 18px;
+    }
+
+    @media @tablet {
+      font-size: 30px;
+      line-height: 57px;
+      margin-bottom: 19px;
+    }
   }
 }

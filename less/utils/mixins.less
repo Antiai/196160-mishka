@@ -23,9 +23,9 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  color: @scheme-color-8;
-  border: 2px solid @scheme-color-8;
-  background-color: @scheme-color-1;
+  color: @btnText;
+  border: 2px solid @btnBorder;
+  background-color: @btnBackground;
 }
 
 .center() {
@@ -40,31 +40,72 @@
   content: "";
 }
 
-.set-wrapper-padding() {
-  padding-right: 9.375%;
-  padding-left: 9.375%;
+.set-caption-font-size() {
+  @media @mobileOnly {
+    font-size: 25px;
+    line-height: 30px;
+  }
 
-  @media @tablet {
-    padding-left: 50px;
-    padding-right: 50px;
+  @media @tabletOnly {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media @desktop {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
-.set-up-bottom-shadow {
-  box-shadow: 0 1px @very-light-gray,
-  inset 0 1px @very-light-gray;
+.set-wrapper-padding() {
+  @media @mobileOnly {
+    padding-right: @mobilePadding;
+    padding-left: @mobilePadding;
+  }
+
+  @media @tabletOnly {
+    padding-right: @tabletPadding;
+    padding-left: @tabletPadding;
+  }
+
+  @media @desktop {
+    padding-right: @desktopPadding;
+    padding-left: @desktopPadding;
+  }
 }
 
 .set-box() {
-  position: absolute;
-  top: -10px;
-  left: 0;
-
-  width: 40px;
-  height: 40px;
-  margin-right: 22px;
-
   content: "";
 
-  border: 2px solid @scheme-color-8;
+  border: 2px solid @formFilterBorder;
+
+  @media @mobileOnly {
+    min-width: @mobileBox;
+    width: @mobileBox;
+    height: @mobileBox;
+    margin-right: 22px;
+  }
+
+  @media @tablet {
+    min-width: @tabletBox;
+    width: @tabletBox;
+    height: @tabletBox;
+    margin-right: 28px;
+  }
+}
+
+.set-placeholder() {
+  &::placeholder {
+    color: fade(@formPlaceholderText, 30%);
+
+    @media @mobileOnly {
+      font-size: 17px;
+      line-height: 18px;
+    }
+
+    @media @tablet {
+      font-size: 19px;
+      line-height: 19px;
+    }
+  }
 }

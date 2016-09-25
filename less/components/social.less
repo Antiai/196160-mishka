@@ -1,18 +1,24 @@
 .social {
-  display: table;
+  align-items: center;
+  justify-content: center;
 
-  width: 100%;
-  padding-right: 23.07%;
-  padding-left: 23.07%;
+  display: flex;
 
-  border-bottom: 1px solid @scheme-color-11;
+  min-height: 80px;
+  padding: 20px;
+  padding-bottom: 20px;
+
+  @media @tablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &__icon {
-    display: table-cell;
+    display: block;
 
-    padding-top: 28px;
-    padding-bottom: 24px;
-
-    text-align: center;
+    margin-top: auto;
+    margin-right: 20px;
+    margin-bottom: auto;
+    margin-left: 20px;
   }
 }

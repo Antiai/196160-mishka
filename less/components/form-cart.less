@@ -11,41 +11,52 @@
   }
 
   &__legend {
-    font-size: 15px;
+    text-align: center;
     line-height: 30px;
 
-    margin-bottom: 25px;
+    color: @formText;
 
-    text-align: center;
+    @media @mobileOnly {
+      font-size: 15px;
 
-    color: @scheme-color-8;
+      margin-bottom: 25px;
+    }
+
+    @media @tablet {
+      font-size: 17px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__select {
     display: none;
     &:checked + label {
-      border-color: @scheme-color-6;
+      border-color: @formSizeCheckedBorder;
     }
   }
 
   &__label {
     .btn();
 
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 17px;
+    color: @formText;
+    border-color: fade(@formSizeBorder, 10%);
 
-    display: inline-block;
+    @media @mobileOnly {
+      width: 31.16%;
+    }
 
-    width: 31.16%;
-
-    vertical-align: middle;
-
-    color: @scheme-color-8;
-    border-color: @scheme-color-transparent-4;
+    @media @tablet {
+      width: 32%;
+    }
 
     &:not(:last-child) {
-      margin-right: 2.69%;
+      margin-right: 7px;
     }
   }
 
@@ -54,8 +65,8 @@
 
     width: 100%;
 
-    color: @scheme-color-1;
-    border: none;
-    background-color: @scheme-color-6;
+    color: @btnCartAddText;
+    border-color: @btnCartAddBackground;
+    background-color: @btnCartAddBackground;
   }
 }

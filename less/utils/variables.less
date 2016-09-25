@@ -1,43 +1,61 @@
 // BREAKPOINTS
-@min-width: 320px;
-@tablet-width: 768px;
-@desktop-width: 1200px;
+@tabletWidth: 768px;
+@desktopWidth: 1150px;
+
+// bound variables
+@tabletBeforeWidth: (@tabletWidth - 1px);
+@desktopBeforeWidth: (@desktopWidth - 1px);
 
 // MEDIA CONDITIONS
-@tablet: ~"screen and (min-width: @{tablet-width})";
-@desktop: ~"screen and (min-width: @{desktop-width})";
+@tablet: ~"screen and (min-width: @{tabletWidth})";
+@desktop: ~"screen and (min-width: @{desktopWidth})";
+
+@mobileOnly: ~"screen and (max-width: @{tabletBeforeWidth})";
+@tabletOnly: ~"screen and (min-width: @{tabletWidth}) and (max-width: @{desktopBeforeWidth})";
+
+// intermediate media conditions
+@mobileIntermediate: ~"screen and (min-width: @{mobileIntermediateWidth})";
+@mobileIntermediateTablet: ~"screen and (min-width: @{mobileIntermediateWidth}) and (max-width: @{desktopBeforeWidth})";
+
+// key widths
+@minWidth: 320px;
+@maxWidth: 700px; //center mobile content
+@tabletMaxWidth: 900px; //center desktop content
+@desktopMaxWidth: 1200px;
+
+// intermediate breakpoints
+@mobileIntermediateWidth: (@minWidth * 2);
+
+// main menu heights
+@minHeight: 79px;
+@tabletMinHeight: 89px;
+
+// catalog parts heights
+@catalogPartsMinHeight: 103px;
+@catalogPartsTabletMinHeight: 119px;
+
+// paddings
+@mobilePadding: 30px;
+@tabletPadding: 50px;
+@desktopPadding: 50px;
+
+// offsets
+@tabletOffset: 167px;
+@desktopOffset: 175px;
+
+// filter dimensions
+@mobileBox: 40px;
+@tabletBox: 52px;
 
 // #colors
 @white: #fff;
 @black: #000;
-@very-dark-red: #221f1f;
-@very-light-gray: #ececec;
-@very-light-gray-lighter: #f1f1f1;
-@moderate-cyan: #63d1bb;
-@moderate-cyan-darker: #56c3b2;
-@dark-gray: #444;
-@light-gray: #c6c6c6;
-@dark-cyan: #149080;
-@very-light-gray-darker: #e5e5e5;
-@transparent-black-25: rgba(0, 0, 0, 0.25);
-@transparent-black-50: rgba(0, 0, 0, 0.5);
-@transparent-dark-gray-10: rgba(68, 68, 68, 0.1);
-@transparent-dark-gray-30: rgba(68, 68, 68, 0.3);
-
-// color-scheme (add new row scheme-color-# if you need additional scheme color)
-@scheme-color-1: @white;
-@scheme-color-2: @black;
-@scheme-color-3: @very-dark-red;
-@scheme-color-4: @very-light-gray;
-@scheme-color-5: @very-light-gray-lighter;
-@scheme-color-6: @moderate-cyan;
-@scheme-color-7: @moderate-cyan-darker;
-@scheme-color-8: @dark-gray;
-@scheme-color-9: @light-gray;
-@scheme-color-10: @dark-cyan;
-@scheme-color-11: @very-light-gray-darker;
-// transparent scheme colors
-@scheme-color-transparent-1: @transparent-black-25;
-@scheme-color-transparent-2: @transparent-dark-gray-30;
-@scheme-color-transparent-3: @transparent-black-50;
-@scheme-color-transparent-4: @transparent-dark-gray-10;
+@veryDarkRed: #221f1f;
+@darkGray: #444;
+@lightGray: #c6c6c6;
+@veryLightGrayDarker: #e5e5e5;
+@veryLightGray: #ececec;
+@veryLightGrayLighter: #f1f1f1;
+@darkCyan: #149080;
+@moderateCyan: #63d1bb;
+@moderateCyanDarker: #56c3b2;

@@ -1,27 +1,116 @@
 .company {
-  min-width: @min-width;
-  padding-top: 14px;
   padding-bottom: 35px;
 
-  &__wrapper {
-    .set-wrapper-padding();
+  @media @mobileOnly {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
+  @media @tabletOnly {
+    padding-top: 56px;
+    padding-bottom: 36px;
+  }
+
+  @media @desktop {
+    padding-top: 68px;
+  }
+
+  &__wrapper {
+    @media @mobileOnly {
+      padding-right: @mobilePadding;
+      padding-left: @mobilePadding;
+    }
+
+    @media @tabletOnly {
+      padding-right: @tabletPadding;
+      padding-left: @tabletPadding;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media @tablet {
+      max-width: @tabletWidth;
+    }
+
+    @media @desktop {
+      margin-left: (@tabletPadding + @desktopOffset);
+      margin-right: auto;
+    }
   }
 
   &__title {
-    font-size: 25px;
-    line-height: 30px;
-    margin-bottom: 31px;
+    .set-caption-font-size();
+
+    margin-top: 0;
+
+    @media @mobileOnly {
+      margin-bottom: 31px;
+    }
+
+    @media @tabletOnly {
+      margin-bottom: 53px;
+    }
+
+    @media @desktop {
+      margin-bottom: 54px;
+    }
   }
 
   &__features {
-    list-style: none;
-    padding-left: 0;
     font-weight: bold;
+
+    padding-left: 0;
+
+    list-style: none;
+    margin: 0;
+
+    @media @mobileIntermediate {
+      flex-wrap: wrap;
+
+      display: flex;
+      align-content: center;
+    }
+  }
+
+  &__feature {
+    @media @mobileOnly {
+      margin-bottom: 31px;
+    }
+
+    @media @mobileIntermediate {
+      width: 50%;
+    }
+
+    @media @tablet {
+      margin-bottom: 56px;
+    }
+
+    &--order-1 {
+      @media @mobileIntermediate {
+        order: 1;
+      }
+    }
+
+    &--order-2 {
+      @media @mobileIntermediate {
+        order: 2;
+      }
+    }
   }
 
   &__advantage {
-    font-size: 17px;
-    line-height: 17px;
+    @media @mobileOnly {
+      font-size: 17px;
+      line-height: 17px;
+    }
+
+    @media @mobileIntermediate {
+      padding-right: 20px;
+    }
+
+    @media @tablet {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }

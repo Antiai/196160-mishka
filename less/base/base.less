@@ -4,13 +4,26 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
+  .center();
+
   font-family: "Open Sans", "Tahoma", sans-serif;
   font-size: 15px;
   line-height: 2em;
 
-  color: @black;
-  background-color: @white;
+  min-width: @minWidth;
+  max-width: @maxWidth;
+
+  color: @txtColor;
+  background-color: @bodyBackground;
+
+  @media @tablet {
+    max-width: @tabletMaxWidth;
+  }
+
+  @media @desktop {
+    max-width: @desktopMaxWidth;
+  }
 }
 
 .visually-hide {
