@@ -16,7 +16,11 @@
 
   display: block;
 
-  padding: 16px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
 
   cursor: pointer;
   text-align: center;
@@ -59,18 +63,18 @@
 
 .set-wrapper-padding() {
   @media @mobileOnly {
-    padding-right: @mobilePadding;
-    padding-left: @mobilePadding;
+    padding-right: @mobileSideOffset;
+    padding-left: @mobileSideOffset
   }
 
   @media @tabletOnly {
-    padding-right: @tabletPadding;
-    padding-left: @tabletPadding;
+    padding-right: @tabletSideOffset;
+    padding-left: @tabletSideOffset
   }
 
   @media @desktop {
-    padding-right: @desktopPadding;
-    padding-left: @desktopPadding;
+    padding-right: @desktopSideOffset;
+    padding-left: @desktopSideOffset
   }
 }
 

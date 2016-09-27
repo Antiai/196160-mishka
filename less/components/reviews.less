@@ -1,19 +1,29 @@
 .reviews {
-  padding-bottom: 44px;
+  border-bottom: 7px solid @contentDivider;
 
-  border-bottom: 3px solid @contentDivider;
+  @media @mobileOnly {
+    padding-bottom: 44px;
+  }
+
+  @media @tabletOnly {
+    padding-bottom: 75px;
+  }
+
+  @media @desktop {
+    padding-bottom: 83px;
+  }
 
   &__wrapper {
     @media @mobileOnly {
-      padding-right: @mobilePadding;
-      padding-left: @mobilePadding;
+      padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
     }
 
     @media @tabletOnly {
-      padding-top: 83px;
-      padding-right: @tabletPadding;
+      padding-top: 77px;
+      padding-right: @tabletSideOffset;
       padding-bottom: 50px;
-      padding-left: @tabletPadding;
+      padding-left: @tabletSideOffset;
     }
 
     @media @tablet {
@@ -30,9 +40,9 @@
     }
 
     @media @desktop {
-      margin-right: @desktopPadding;
-      margin-left: @desktopPadding;
-      padding-top: 78px;
+      margin-right: @desktopSideOffset;
+      margin-left: @desktopSideOffset;
+      padding-top: 71px;
       padding-bottom: 96px;
       padding-left: @desktopOffset;
     }
@@ -44,7 +54,7 @@
     margin-top: 0;
 
     @media @mobileOnly {
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
 
     @media @tablet {
@@ -62,23 +72,29 @@
     }
 
     @media @tabletOnly {
-      margin-top: 48px;
-      margin-bottom: 62px;
+      margin-bottom: 58px;
     }
 
     @media @tablet {
       order: 1;
 
       font-size: 17px;
+
+      margin-top: 45px;
     }
 
     @media @desktop {
-      margin-top: 57px;
-      margin-bottom: 42px;
+      margin-bottom: 39px;
+      padding-right: 100px;
     }
   }
 
   &__author {
+    @media @mobileOnly {
+      margin-top: 26px;
+      margin-bottom: 32px;
+    }
+
     @media @tablet {
       order: 1;
     }
@@ -88,17 +104,16 @@
     font-weight: bold;
     line-height: 24px;
 
+    margin-bottom: 3px;
+
     @media @mobileOnly {
       font-size: 18px;
-
-      margin-bottom: 8px;
     }
 
     @media @tablet {
       font-size: 17px;
 
       margin-top: 0;
-      margin-bottom: 7px;
     }
   }
 
@@ -106,6 +121,7 @@
     line-height: 30px;
 
     margin-top: 0;
+    margin-bottom: 0;
 
     @media @mobileOnly {
       font-size: 18px;
@@ -113,9 +129,6 @@
 
     @media @tablet {
       font-size: 17px;
-
-      margin-top: 0;
-      margin-bottom: 0;
     }
   }
 
@@ -126,7 +139,7 @@
 
     @media @mobileOnly {
       width: 100%;
-      margin-bottom: 38px;
+      margin-bottom: 39px;
     }
 
     @media @tablet {
@@ -136,10 +149,19 @@
     }
   }
 
+  &__icon {
+    .center();
+
+    display: block;
+  }
+
   &__container {
-    @media @tablet {
-      margin-top: auto;
-      margin-bottom: auto;
+    @media @tabletOnly {
+      margin-top: 2px;
+    }
+
+    @media @desktop {
+      margin-top: 9px;
     }
   }
 

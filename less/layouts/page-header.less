@@ -10,24 +10,20 @@
     background-color: @headerBackground;
     box-shadow: 0 -1px @navBorder;
 
-
-
     @media @tablet {
-      margin-top: -@tabletMinHeight;
-    }
-
-    @media @desktop {
-      min-height: 255px;
+      margin-top: @tabletMenuItemVerticalOffset;
     }
 
     &--index {
-      min-height: 282px;
-      padding-top: 55px;
-      padding-bottom: 55px;
-
       background-image: url("../img/header/hero-mobile@1x.jpg");
       background-repeat: no-repeat;
       background-position: center -17px;
+
+      @media @mobileOnly {
+        min-height: 282px;
+        padding-top: 53px;
+        padding-bottom: 55px;
+      }
 
       @media @tablet {
         min-height: 746px;
@@ -36,11 +32,10 @@
     }
 
     &--title {
-      padding-top: 55px;
-      padding-bottom: 55px;
-
       @media @mobileOnly {
         min-height: 177px;
+        padding-top: 53px;
+        padding-bottom: 55px;
       }
 
       @media @tabletOnly {
@@ -61,7 +56,7 @@
     display: none;
 
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 17px;
 
     @media @tablet {
       font-size: 15px;
@@ -69,13 +64,13 @@
 
       display: block;
 
-      margin-right: @tabletPadding;
+      margin-right: @tabletSideOffset;
 
       text-align: right;
     }
 
     @media @desktop {
-      margin-right: @desktopPadding;
+      margin-right: @desktopSideOffset;
     }
   }
 
@@ -87,32 +82,33 @@
     @media @mobileOnly {
       font-size: 27px;
       line-height: 30px;
-      padding-left: @mobilePadding;
-      padding-right: @mobilePadding;
+      padding-left: @mobileSideOffset;
+      padding-right: @mobileSideOffset;
     }
 
     @media @tabletOnly {
       font-size: 43px;
       line-height: 50px;
 
-      margin-top: 62px;
+      margin-top: 54px;
+    }
+
+    @media @tablet {
+      padding-left: @tabletSideOffset;
+      padding-right: @tabletSideOffset;
     }
 
     @media @desktop {
       font-size: 53px;
       line-height: 57px;
-      margin-top: 63px;
+      margin-top: 53px;
     }
 
     &--index {
       max-width: 615px;
 
-      @media @tabletOnly {
-        margin-top: 120px;
-      }
-
-      @media @desktop {
-        margin-top: 122px;
+      @media @tablet {
+        margin-top: 112px;
       }
     }
   }

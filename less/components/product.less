@@ -1,11 +1,19 @@
 .product {
   .set-wrapper-padding();
 
-  padding-top: 11px;
-  padding-bottom: 35px;
+  @media @mobileOnly {
+    padding-top: 29px;
+    padding-bottom: 35px;
+  }
 
-  @media @tablet {
-    padding-top: 52px;
+  @media @tabletOnly {
+    padding-top: 44px;
+    padding-bottom: 63px;
+  }
+
+  @media @desktop {
+    padding-top: 123px;
+    padding-bottom: 90px;
   }
 
   &__wrapper {
@@ -18,13 +26,13 @@
     @media @tabletOnly {
       justify-content: space-between;
 
-      margin-bottom: 60px;
+      margin-bottom: 49px;
     }
 
     @media @desktop {
       justify-content: flex-start;
 
-      margin-bottom: 58px;
+      margin-bottom: 48px;
     }
   }
 
@@ -49,7 +57,8 @@
     .set-caption-font-size();
 
     @media @mobileOnly {
-      margin-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 6px;
     }
 
     @media @tablet {
@@ -67,14 +76,18 @@
     line-height: 17px;
 
     margin-top: 0;
-    margin-bottom: 30px;
 
     text-transform: uppercase;
 
     color: @txtStrong;
 
+    @media @mobileOnly {
+      margin-bottom: 24px;
+    }
+
     @media @tablet {
       width: 72px;
+      margin-top: 6px;
       margin-bottom: 0;
 
       text-align: center;
@@ -97,42 +110,56 @@
       font-size: 15px;
       line-height: 24px;
 
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     @media @tablet {
       font-size: 17px;
       line-height: 30px;
+
+      margin-top: 0;
     }
 
     @media @tabletOnly {
-      margin-bottom: 41px;
+      margin-bottom: 36px;
     }
 
     @media @desktop {
-      margin-bottom: 55px;
+      margin-bottom: 47px;
     }
   }
 
   &__photo {
     margin-top: 0;
     margin-right: auto;
+    margin-bottom: 0;
     margin-left: auto;
 
     text-align: center;
 
+    @media @tabletOnly {
+      top: 8px;
+    }
+
     @media @tablet {
       position: absolute;
-      top: 0;
       right: -100%;
     }
+
+    @media @desktop {
+      top: -158px;
+    }
+  }
+
+  &__image {
+    display: block;
   }
 
   &__price {
     font-weight: bold;
     line-height: 24px;
 
-    margin-top: 23px;
+    margin-top: 24px;
 
     text-align: center;
 
@@ -141,18 +168,17 @@
     @media @mobileOnly {
       font-size: 17px;
 
-      margin-bottom: 27px;
+      margin-bottom: 26px;
     }
 
     @media @tablet {
       font-size: 20px;
 
-      margin-bottom: 37px;
+      margin-bottom: 34px;
     }
   }
 
   &__btn-buy {
     .btn();
-    // .center();
   }
 }

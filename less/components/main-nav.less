@@ -1,13 +1,14 @@
 .main-nav {
   &__items {
-    .set-wrapper-padding();
-
     margin: 0;
-    padding: 0;
 
     list-style: none;
 
     box-shadow: inset 0 1px @navBorder;
+
+    @media @mobileOnly {
+      padding: 0;
+    }
 
     @media @tablet {
       flex-wrap: wrap;
@@ -15,42 +16,46 @@
       display: flex;
 
       width: 100%;
+      padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
     }
   }
 
   &__item {
     position: relative;
 
-    min-height: @minHeight;
-    padding-top: 27px;
-    padding-bottom: 27px;
+    @media @mobileOnly {
+      min-height: @MenuItemMinHeight;
+      padding-top: 27px;
+      padding-bottom: 27px;
 
-    background-color: @navBackground;
-    box-shadow: 0 1px @navBorder,
-    inset 0 1px @navBorder;
+      background-color: @navBackground;
+      box-shadow: 0 1px @navBorder,
+      inset 0 1px @navBorder;
+    }
 
     @media @tablet {
-      min-height: @tabletMinHeight;
+      min-height: @tabletMenuItemMinHeight;
       padding-top: 32px;
       padding-bottom: 32px;
-
-      background: none;
-      box-shadow: none;
     }
 
     &--logo {
       align-items: center;
       justify-content: center;
 
-      .set-wrapper-padding();
-
       display: flex;
 
       padding-top: 20px;
       padding-bottom: 20px;
 
+      @media @mobileOnly {
+        padding-right: @mobileSideOffset;
+        padding-left: @mobileSideOffset;
+      }
+
       @media @tablet {
-        width: 45.2%;
+        width: 48.05%;
         min-width: 0;
         max-width: none;
         margin-right: 0;
@@ -69,11 +74,11 @@
     }
 
     &--catalog {
-      @media @tablet {
+      @media @tabletOnly {
         order: 2;
 
         width: 25%;
-        padding-top: 20px;
+        padding-top: 17px;
       }
 
       @media @desktop {
@@ -87,28 +92,25 @@
     }
 
     &--form {
-      @media @tablet {
+      @media @tabletOnly {
         order: 2;
 
         width: 25%;
-        padding-top: 20px;
+        padding-top: 17px;
       }
 
       @media @desktop {
         order: 0;
 
-        width: 18.09%;
+        // width: 18.09%;
         padding-top: 32px;
-
-        text-align: right;
       }
     }
 
     &--search {
       @media @tablet {
-        width: 12.15%;
-
-        text-align: center;
+        width: 84px;
+        padding-top: 36px;
 
         border-right: 1px solid @navBorder;
         border-left: 1px solid @navBorder;
@@ -117,8 +119,6 @@
 
       @media @desktop {
         order: 1;
-
-        width: 8%;
       }
     }
 
@@ -126,13 +126,11 @@
       @media @tablet {
         order: 1;
 
-        width: 42.65%;
-
-        text-align: right;
+        margin-left: auto;
       }
 
       @media @desktop {
-        width: 25.34%;
+        margin-left: auto;
       }
     }
 
@@ -148,7 +146,7 @@
         display: block;
 
         width: 17.62%;
-        padding-top: 20px;
+        padding-top: 17px;
       }
     }
 
@@ -164,7 +162,7 @@
         display: block;
 
         width: 18.09%;
-        padding-top: 20px;
+        padding-top: 17px;
       }
     }
   }
@@ -245,17 +243,15 @@
 
     &--cart {
       @media @tablet {
-        position: relative;
+        align-items: center;
+
+        display: flex;
       }
     }
 
     &--small-tab {
-      @media @tablet {
+      @media @tabletOnly {
         font-size: 15px;
-      }
-
-      @media @desktop {
-        font-size: 17px;
       }
     }
 
@@ -267,14 +263,20 @@
   }
 
   &__icon {
-    position: absolute;
-    top: 4px;
-    left: -38px;
+    display: block;
 
     opacity: 0.2;
 
+    @media @mobileOnly {
+      position: absolute;
+      top: 4px;
+      left: -43px;
+    }
+
     @media @tablet {
       position: static;
+
+      margin: auto;
     }
 
     &--cart {
@@ -285,35 +287,21 @@
   }
 
   &__wrapper {
-    .center();
-
-    position: relative;
-
     display: block;
+    line-height: 24px;
 
-    width: 185px;
+    @media @mobileOnly {
+      .center();
 
-    @media @tablet {
-      align-items: center;
-      justify-content: flex-start;
+      position: relative;
 
-      display: flex;
-
-      width: auto;
-    }
-
-    @media @desktop {
-      justify-content: flex-start;
+      width: 171px;
     }
 
     &--form {
       @media @desktop {
         margin-left: 35px;
       }
-    }
-
-    &--cart {
-      justify-content: flex-end;
     }
 
     &--sales {

@@ -1,29 +1,29 @@
 .company {
-  padding-bottom: 35px;
 
   @media @mobileOnly {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 27px;
+    padding-bottom: 41px;
   }
 
   @media @tabletOnly {
-    padding-top: 56px;
-    padding-bottom: 36px;
+    padding-top: 48px;
+    padding-bottom: 43px;
   }
 
   @media @desktop {
-    padding-top: 68px;
+    padding-top: 58px;
+    padding-bottom: 49px;
   }
 
   &__wrapper {
     @media @mobileOnly {
-      padding-right: @mobilePadding;
-      padding-left: @mobilePadding;
+      padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
     }
 
     @media @tabletOnly {
-      padding-right: @tabletPadding;
-      padding-left: @tabletPadding;
+      padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
       margin-left: auto;
       margin-right: auto;
     }
@@ -33,7 +33,7 @@
     }
 
     @media @desktop {
-      margin-left: (@tabletPadding + @desktopOffset);
+      margin-left: (@tabletSideOffset + @desktopOffset);
       margin-right: auto;
     }
   }
@@ -44,15 +44,12 @@
     margin-top: 0;
 
     @media @mobileOnly {
-      margin-bottom: 31px;
+      margin-bottom: 17px;
+
     }
 
-    @media @tabletOnly {
-      margin-bottom: 53px;
-    }
-
-    @media @desktop {
-      margin-bottom: 54px;
+    @media @tablet {
+      margin-bottom: 32px;
     }
   }
 
@@ -73,16 +70,24 @@
   }
 
   &__feature {
+    position: relative;
+
+    padding-top: 70px;
+
     @media @mobileOnly {
-      margin-bottom: 31px;
+      margin-bottom: 13px;
     }
 
-    @media @mobileIntermediate {
+    @media @mobileIntermediateTablet {
       width: 50%;
     }
 
     @media @tablet {
-      margin-bottom: 56px;
+      margin-bottom: 37px;
+    }
+
+    @media @desktop {
+      width: 45.4%;
     }
 
     &--order-1 {
@@ -99,9 +104,12 @@
   }
 
   &__advantage {
+    margin-bottom: 0;
+    margin-top: 0;
+
     @media @mobileOnly {
       font-size: 17px;
-      line-height: 17px;
+      line-height: 20px;
     }
 
     @media @mobileIntermediate {
@@ -110,7 +118,27 @@
 
     @media @tablet {
       font-size: 20px;
-      line-height: 20px;
+      line-height: 24px;
+    }
+
+    @media @desktop {
+      padding-right: 30px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    left: 24px;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    @media @mobileOnly {
+      top: 33px;
+    }
+
+    @media @tablet {
+      top: 35px;
     }
   }
 }

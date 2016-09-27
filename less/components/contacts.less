@@ -1,33 +1,35 @@
 .contacts {
   @media @mobileOnly {
-    padding-top: 38px;
+    padding-top: 35px;
+    padding-bottom: 39px;
   }
 
   @media @tabletOnly {
-    padding-top: 46px;
+    padding-top: 44px;
+    padding-bottom: 59px;
   }
 
   @media @desktop {
     position: relative;
 
     margin-top: 71px;
-    margin-right: @desktopPadding;
     margin-right: 50%;
-    margin-left: @desktopPadding;
-    padding-top: 62px;
+    margin-left: @desktopSideOffset;
+    padding-top: 57px;
+    padding-bottom: 106px;
   }
 
   &__wrapper {
     @media @mobileOnly {
-      padding-right: @mobilePadding;
-      padding-left: @mobilePadding;
+      padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
     }
 
     @media @tabletOnly {
       justify-content: space-between;
 
-      padding-right: @tabletPadding;
-      padding-left: @tabletPadding;
+      padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
     }
 
     @media @tablet {
@@ -47,7 +49,7 @@
       }
 
       @media @desktop {
-        padding-right: @desktopPadding;
+        padding-right: @desktopSideOffset;
       }
     }
 
@@ -71,7 +73,7 @@
       font-size: 18px;
       line-height: 30px;
 
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     @media @tabletOnly {
@@ -100,11 +102,6 @@
   &__icon {
     display: block;
 
-    @media @tablet {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-
     @media @desktop {
       margin-right: auto;
       margin-left: auto;
@@ -118,8 +115,8 @@
 
 
     @media @mobileOnly {
-      margin-top: 28px;
-      margin-bottom: 5px;
+      margin-top: 0;
+      margin-bottom: 30px;
     }
 
     @media @tabletOnly {
@@ -133,9 +130,13 @@
       margin-top: 35px;
     }
 
+    @media @desktop {
+      margin-top: 37px;
+    }
+
     &:nth-child(2) {
       @media @desktop {
-        margin-top: 32px;
+        margin-top: 29px;
       }
     }
   }
@@ -150,8 +151,6 @@
     margin-bottom: 0;
 
     &--border {
-      padding-bottom: 5px;
-
       border-bottom: 1px solid @emailBorder;
     }
   }
@@ -161,16 +160,21 @@
     min-height: 457px;
 
     background-color: @veryLightGrayLighter;
-    background-image: url("../img/maps/map-mobile@1x.jpg");
+    background-image: url("../img/icons/icon-map-pin.svg"),
+    url("../img/maps/map-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: top center;
+
 
     @media @mobileOnly {
-      margin-top: 35px;
+      margin-top: 37px;
+
+      background-position: 123px 165px, top center;
     }
 
     @media @tabletOnly {
       margin-top: 54px;
+
+      background-position: 348px 165px, top center;
     }
 
     @media @desktop {
@@ -179,6 +183,8 @@
       right: -100%;
 
       width: 100%;
+
+      background-position: 238px 165px, top center;
     }
   }
 
@@ -187,23 +193,20 @@
 
     @media @mobileOnly {
       margin-top: 39px;
-      margin-bottom: 39px;
     }
 
     @media @tablet {
       width: 230px;
       margin-right: auto;
-      margin-bottom: 57px;
     }
 
     @media @tabletOnly {
-      margin-top: 55px;
+      margin-top: 56px;
       margin-left: auto;
     }
 
     @media @desktop {
-      margin-top: 70px;
-      margin-bottom: 105px;
+      margin-top: 79px;
     }
   }
 }
