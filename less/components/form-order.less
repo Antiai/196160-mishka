@@ -390,12 +390,12 @@
     &--textarea {
       @media @tablet {
         padding-top: 63px;
-        padding-bottom: 43px;
+        padding-bottom: 54px;
       }
 
       @media @desktop {
         padding-right: (@desktopOffset + @tabletSideOffset);
-        padding-bottom: 81px;
+        padding-bottom: 91px;
       }
     }
 
@@ -436,6 +436,10 @@
       }
 
       &:not(:last-child) {
+        @media @mobileOnly {
+          margin-bottom: 16px;
+        }
+
         margin-bottom: 24px;
       }
     }
@@ -499,6 +503,7 @@
     display: block;
 
     width: 100%;
+    min-height: 142px;
 
     resize: vertical;
 
