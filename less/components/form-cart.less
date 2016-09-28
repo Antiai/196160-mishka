@@ -11,27 +11,30 @@
   }
 
   &__legend {
-    text-align: center;
     line-height: 30px;
+
+    text-align: center;
 
     color: @formText;
 
     @media @mobileOnly {
       font-size: 15px;
 
-      margin-bottom: 25px;
+      margin-bottom: 23px;
     }
 
     @media @tablet {
       font-size: 17px;
-      margin-bottom: 24px;
+
+      margin-bottom: 21px;
     }
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    display: flex;
   }
 
   &__select {
@@ -64,9 +67,10 @@
     .btn();
 
     width: 100%;
+    min-height: 52px;
 
     color: @btnCartAddText;
-    border-color: @btnCartAddBackground;
+    border: none;
     background-color: @btnCartAddBackground;
   }
 }

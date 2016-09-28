@@ -5,11 +5,13 @@
   list-style: none;
 
   @media @tablet {
-    display: flex;
     justify-content: center;
-    margin-left: @tabletPadding;
-    margin-right: @tabletPadding;
+
+    display: flex;
+
     margin-top: -@catalogPartsTabletMinHeight;
+    margin-right: @tabletSideOffset;
+    margin-left: @tabletSideOffset;
   }
 
   &__item {
@@ -44,8 +46,8 @@
 
     @media @tablet {
       min-height: @catalogPartsTabletMinHeight;
-      padding-left: 36px;
       padding-right: 36px;
+      padding-left: 36px;
     }
   }
 
@@ -54,6 +56,7 @@
     line-height: 24px;
 
     width: 130px;
+    margin-top: 15px;
 
     @media @tablet {
       font-size: 20px;
@@ -61,11 +64,13 @@
     }
   }
 
-  &__icon-wrapper {
-    text-align: right;
-  }
-
   &__icon {
+    display: block;
+
     opacity: 0.5;
+
+    @media @mobileOnly {
+      margin-top: 4px;
+    }
   }
 }

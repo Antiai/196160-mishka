@@ -10,12 +10,12 @@
       font-size: 13px;
       line-height: 24px;
 
-      margin-top: 25px;
-      margin-bottom: 25px;
+      margin-top: 23px;
+      margin-bottom: 23px;
     }
 
     @media @tablet {
-      margin-bottom: 59px;
+      margin-bottom: 55px;
     }
 
     @media @tablet {
@@ -65,7 +65,7 @@
     &--contacts {
       &:not(:last-child) {
         @media @mobileOnly {
-          margin-bottom: 41px;
+          margin-bottom: 39px;
         }
 
         @media @tablet {
@@ -85,7 +85,7 @@
     color: @formLegendText;
 
     @media @mobileOnly {
-      margin-bottom: 39px;
+      margin-bottom: 34px;
       padding-right: 22px;
     }
 
@@ -105,9 +105,15 @@
       text-align: center;
     }
 
+    &--filter {
+      @media @mobileOnly {
+        margin-bottom: 24px;
+      }
+    }
+
     &--name {
       @media @mobileOnly {
-        margin-bottom: 36px;
+        margin-bottom: 26px;
       }
     }
 
@@ -117,7 +123,7 @@
 
     &--textarea {
       @media @mobileOnly {
-        margin-bottom: 29px;
+        margin-bottom: 32px;
       }
     }
   }
@@ -146,7 +152,7 @@
 
     &:not(:last-child) {
       @media @mobileOnly {
-        margin-bottom: 22px;
+        margin-bottom: 21px;
       }
 
       @media @tablet {
@@ -191,6 +197,7 @@
 
           width: 16px;
           height: 16px;
+          margin-top: -2px;
         }
 
         @media @tablet {
@@ -258,6 +265,10 @@
         .set-box();
 
         border-radius: 50%;
+
+        @media @mobileOnly {
+          margin-top: -4px;
+        }
       }
     }
 
@@ -274,7 +285,9 @@
     &--icon {
       position: absolute;
       top: 50%;
-      right: 0;
+      right: 4px;
+
+      margin-top: 5px;
 
       transform: translateY(-50%);
 
@@ -295,63 +308,67 @@
     position: relative;
 
     @media @mobileOnly {
-      padding-right: @mobilePadding;
-      padding-left: @mobilePadding;
+      padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
     }
 
     @media @tablet {
-      padding-right: @tabletPadding;
+      padding-right: @tabletSideOffset;
       padding-bottom: 20px;
-      padding-left: @tabletPadding;
+      padding-left: @tabletSideOffset;
     }
 
     &--type {
       @media @mobileOnly {
-        margin-bottom: 41px;
+        margin-bottom: 28px;
       }
 
       @media @tabletOnly {
-        margin-top: 68px;
+        margin-top: 71px;
       }
 
       @media @tablet {
-        min-height: 290px;
+        min-height: 295px;
       }
 
       @media @desktop {
-        margin-top: 112px;
+        margin-top: 120px;
       }
     }
 
     &--filter {
       @media @mobileOnly {
-        margin-bottom: 47px;
+        margin-bottom: 32px;
       }
 
       @media @tablet {
         padding-top: 61px;
-        padding-bottom: 61px;
+        padding-bottom: 39px;
       }
     }
 
     &--name {
       @media @mobileOnly {
-        margin-bottom: 36px;
+        margin-bottom: 33px;
+      }
+
+      @media @tabletOnly {
+        padding-top: 48px;
       }
 
       @media @tablet {
-        padding-top: 51px;
         padding-bottom: 67px;
       }
 
       @media @desktop {
-        padding-right: (@desktopOffset + @tabletPadding);
+        padding-top: 51px;
+        padding-right: (@desktopOffset + @tabletSideOffset);
       }
     }
 
     &--contacts {
       @media @mobileOnly {
-        margin-bottom: 35px;
+        margin-bottom: 33px;
       }
 
       @media @tablet {
@@ -360,7 +377,7 @@
       }
 
       @media @desktop {
-        padding-right: (@desktopOffset + @tabletPadding);
+        padding-right: (@desktopOffset + @tabletSideOffset);
       }
     }
 
@@ -372,25 +389,25 @@
 
     &--textarea {
       @media @tablet {
-        padding-top: 64px;
-        padding-bottom: 53px;
+        padding-top: 63px;
+        padding-bottom: 54px;
       }
 
       @media @desktop {
-        padding-right: (@desktopOffset + @tabletPadding);
-        padding-bottom: 90px;
+        padding-right: (@desktopOffset + @tabletSideOffset);
+        padding-bottom: 91px;
       }
     }
 
     &--submit {
       @media @mobileOnly {
-        margin-top: 10px;
-        padding-right: @mobilePadding;
-        padding-left: @mobilePadding;
+        margin-top: 9px;
+        padding-right: @mobileSideOffset;
+        padding-left: @mobileSideOffset;
       }
 
       @media @tabletOnly {
-        margin-bottom: 52px;
+        margin-bottom: 33px;
       }
 
       @media @tablet {
@@ -401,9 +418,9 @@
       }
 
       @media @desktop {
-        margin-right: @tabletPadding;
-        margin-bottom: 95px;
-        margin-left: @tabletPadding;
+        margin-right: @tabletSideOffset;
+        margin-bottom: 76px;
+        margin-left: @tabletSideOffset;
         padding-right: @desktopOffset;
         padding-left: @desktopOffset;
       }
@@ -419,6 +436,10 @@
       }
 
       &:not(:last-child) {
+        @media @mobileOnly {
+          margin-bottom: 16px;
+        }
+
         margin-bottom: 24px;
       }
     }
@@ -449,6 +470,10 @@
     }
 
     &--name {
+      @media @mobileOnly {
+        margin-top: -6px;
+      }
+
       @media @tablet {
         margin-left: 25px;
         padding-left: 17px;
@@ -461,7 +486,7 @@
       padding-right: 40px;
 
       @media @mobileOnly {
-        margin-top: 8px;
+        margin-top: 7px;
       }
 
       @media @tablet {
@@ -478,6 +503,7 @@
     display: block;
 
     width: 100%;
+    min-height: 142px;
 
     resize: vertical;
 
@@ -502,20 +528,21 @@
     line-height: 30px;
 
     margin-top: 0;
-    margin-bottom: 0;
 
     color: @txtContent;
 
     @media @mobileOnly {
       font-size: 14px;
 
-      margin-bottom: 14px;
+      margin-bottom: 15px;
     }
 
     @media @tablet {
       order: 1;
 
       font-size: 17px;
+
+      margin-bottom: 0;
     }
   }
 

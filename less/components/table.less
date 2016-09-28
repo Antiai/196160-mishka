@@ -1,28 +1,50 @@
 .table {
   width: 100%;
-  margin-bottom: 28px;
+
   border-collapse: collapse;
 
+  @media @mobileOnly {
+    margin-bottom: 27px;
+  }
+
   @media @tabletOnly {
-    margin-bottom: 58px;
+    margin-bottom: 56px;
   }
 
   @media @desktop {
-    margin-bottom: 111px;
+    margin-bottom: 108px;
   }
 
   &__cell {
     font-size: 15px;
     line-height: 20px;
+
     color: @tableText;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     border-bottom: 1px solid @tableBorder;
 
+    @media @mobileOnly {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media @tabletOnly {
+      padding-top: 9px;
+      padding-bottom: 10px;
+    }
+
+    @media @desktop {
+      padding-top: 9px;
+      padding-bottom: 11px;
+    }
+
     &:first-child {
-      width: 37.3%;
+      @media @mobileOnly {
+        width: 37.3%;
+      }
+
+      @media @tablet {
+        width: 33.3%;
+      }
     }
   }
 }

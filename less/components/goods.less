@@ -29,6 +29,10 @@
   &__photo {
     margin: 0;
 
+    @media @tabletOnly {
+      width: 334px;
+    }
+
     @media @desktop {
       min-height: 462px;
     }
@@ -36,7 +40,6 @@
 
   &__image {
     display: block;
-
     margin: auto;
   }
 
@@ -48,7 +51,7 @@
     background-color: @catalogBackground;
 
     @media @mobileOnly {
-      padding-top: 28px;
+      padding-top: 26px;
     }
 
     @media @mobileIntermediateTablet {
@@ -65,11 +68,11 @@
     @media @tabletOnly {
       min-height: 334px;
       padding-right: 34px;
-      padding-left: 34px;
+      padding-left: 26px;
     }
 
     @media @tablet {
-      padding-top: 27px;
+      padding-top: 25px;
     }
 
     @media @desktop {
@@ -103,13 +106,13 @@
     @media @mobileOnly {
       font-size: 17px;
 
-      margin-bottom: 9px;
+      margin-bottom: 5px
     }
 
     @media @tablet {
       font-size: 20px;
 
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 
@@ -135,6 +138,7 @@
 
     @media @mobileOnly {
       font-size: 13px;
+      margin-bottom: 19px;
     }
 
     @media @tablet {
@@ -151,14 +155,19 @@
     line-height: 24px;
 
     margin-top: 0;
-    margin-bottom: 0;
 
     @media @mobileOnly {
       font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    @media @tabletOnly {
+      margin-left: 5px;
     }
 
     @media @tablet {
       font-size: 17px;
+      margin-bottom: 5px;
     }
   }
 
