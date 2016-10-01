@@ -1,11 +1,10 @@
 .include-custom-font(@src, @family, @weight: normal, @style: normal) {
   @font-face {
-    src: url("../../fonts/@{src}.woff") format("woff"),
-    url("../../fonts/@{src}.woff2") format("woff2");
-
     font-family: @family;
     font-weight: @weight;
     font-style: @style;
+    src: url("../../fonts/@{src}.woff") format("woff"),
+    url("../../fonts/@{src}.woff2") format("woff2");
   }
 }
 
@@ -13,34 +12,53 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 17px;
-
   display: block;
-
   padding-top: 15px;
+  padding-right: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
-  padding-bottom: 16px;
-  padding-right: 16px;
-
   cursor: pointer;
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
+  transition-property: background-color, color;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-
   color: @btnText;
   border: 2px solid @btnBorder;
   background-color: @btnBackground;
+
+  &:hover {
+    color: @btnTextHover;
+    background-color: @btnBackgroundHover;
+  }
+
+  &:active {
+    color: fade(@btnTextActive, 30%);
+    background-color: @btnBackgroundActive;
+  }
 }
 
 .center() {
   margin-right: auto;
   margin-left: auto;
+
+  @media @mobileOnly {
+    max-width: @maxWidth;
+  }
+
+  @media @tabletOnly {
+    max-width: @tabletMaxWidth;
+  }
+
+  @media @desktop {
+    max-width: @desktopMaxWidth;
+  }
 }
 
 .clearfix() {
   display: table;
   clear: both;
-
   content: "";
 }
 
@@ -64,36 +82,36 @@
 .set-wrapper-padding() {
   @media @mobileOnly {
     padding-right: @mobileSideOffset;
-    padding-left: @mobileSideOffset
+    padding-left: @mobileSideOffset;
   }
 
   @media @tabletOnly {
     padding-right: @tabletSideOffset;
-    padding-left: @tabletSideOffset
+    padding-left: @tabletSideOffset;
   }
 
   @media @desktop {
     padding-right: @desktopSideOffset;
-    padding-left: @desktopSideOffset
+    padding-left: @desktopSideOffset;
   }
 }
 
 .set-box() {
   content: "";
-
   border: 2px solid @formFilterBorder;
+  transition: border-color 150ms ease-out;
 
   @media @mobileOnly {
-    min-width: @mobileBox;
-    width: @mobileBox;
-    height: @mobileBox;
+    width: @mobileCheckBoxSize;
+    min-width: @mobileCheckBoxSize;
+    height: @mobileCheckBoxSize;
     margin-right: 22px;
   }
 
   @media @tablet {
-    min-width: @tabletBox;
-    width: @tabletBox;
-    height: @tabletBox;
+    width: @tabletCheckBoxSize;
+    min-width: @tabletCheckBoxSize;
+    height: @tabletCheckBoxSize;
     margin-right: 28px;
   }
 }
@@ -110,6 +128,34 @@
     @media @tablet {
       font-size: 19px;
       line-height: 19px;
+    }
+  }
+}
+
+.set-bottom-zigzag-divider() {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    content: "";
+    background-image: url("../img/decor/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+
+    @media @mobileOnly {
+      height: 7px;
+    }
+
+    @media @tabletOnly {
+      height: 17px;
+    }
+
+    @media @desktop {
+      height: 23px;
     }
   }
 }

@@ -1,7 +1,6 @@
 .table {
-  width: 100%;
-
   border-collapse: collapse;
+  width: 100%;
 
   @media @mobileOnly {
     margin-bottom: 27px;
@@ -16,25 +15,24 @@
   }
 
   &__cell {
+    border-bottom: 1px solid @tableBorder;
+    color: @tableText;
     font-size: 15px;
     line-height: 20px;
 
-    color: @tableText;
-    border-bottom: 1px solid @tableBorder;
-
     @media @mobileOnly {
-      padding-top: 10px;
       padding-bottom: 10px;
+      padding-top: 10px;
     }
 
     @media @tabletOnly {
-      padding-top: 9px;
       padding-bottom: 10px;
+      padding-top: 9px;
     }
 
     @media @desktop {
-      padding-top: 9px;
       padding-bottom: 11px;
+      padding-top: 9px;
     }
 
     &:first-child {
