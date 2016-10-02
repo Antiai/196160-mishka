@@ -1,3 +1,18 @@
 .catalog-short {
-  border-bottom: 7px solid @contentDivider;
+  .set-bottom-zigzag-divider();
+
+  @media @mobileOnly {
+    padding-top: 29px;
+    padding-bottom: 42px;
+  }
+
+  @media @tabletOnly {
+    padding-top: 44px;
+    padding-bottom: 70px;
+  }
+
+  @media @desktop {
+    padding-top: 123px;
+    padding-bottom: 96px;
+  }
 }

@@ -10,13 +10,18 @@
   }
 
   @media @desktop {
-    position: relative;
-
-    margin-top: 71px;
-    margin-right: 50%;
-    margin-left: @desktopSideOffset;
-    padding-top: 57px;
+    padding-top: 129px;
     padding-bottom: 106px;
+  }
+
+  &__container {
+    .center();
+
+    @media @desktop {
+      position: relative;
+      padding-right: @desktopSideOffset;
+      padding-left: @desktopSideOffset;
+    }
   }
 
   &__wrapper {
@@ -27,19 +32,18 @@
 
     @media @tabletOnly {
       justify-content: space-between;
-
       padding-right: @tabletSideOffset;
       padding-left: @tabletSideOffset;
     }
 
     @media @tablet {
+      display: flex;
       align-items: center;
       flex-wrap: wrap;
-
-      display: flex;
     }
 
     @media @desktop {
+      padding-right: 50%;
       padding-left: @desktopOffset;
     }
 
@@ -49,7 +53,7 @@
       }
 
       @media @desktop {
-        padding-right: @desktopSideOffset;
+        padding-right: 54%;
       }
     }
 
@@ -60,7 +64,11 @@
     }
   }
 
-  &__container {
+  &__icon-container {
+    @media @mobileOnly {
+      display: none;
+    }
+
     @media @desktop {
       width: @desktopOffset;
     }
@@ -72,7 +80,6 @@
     @media @mobileOnly {
       font-size: 18px;
       line-height: 30px;
-
       margin-bottom: 25px;
     }
 
@@ -86,16 +93,9 @@
     }
 
     @media @desktop {
-      order: 1;
-
       font-size: 53px;
       line-height: 57px;
-    }
-  }
-
-  &__container {
-    @media @mobileOnly {
-      display: none;
+      order: 1;
     }
   }
 
@@ -109,25 +109,23 @@
   }
 
   &__items {
+    line-height: 30px;
+    display: flex;
     align-items: flex-start;
 
-    display: flex;
-
-
     @media @mobileOnly {
+      font-size: 15px;
       margin-top: 0;
       margin-bottom: 30px;
     }
 
     @media @tabletOnly {
       width: 50%;
+      margin-top: 33px;
     }
 
     @media @tablet {
       font-size: 17px;
-      line-height: 30px;
-
-      margin-top: 35px;
     }
 
     @media @desktop {
@@ -149,42 +147,67 @@
   &__content {
     margin-top: 0;
     margin-bottom: 0;
+    text-decoration: none;
+    color: inherit;
 
-    &--border {
-      border-bottom: 1px solid @emailBorder;
+    @media @mobileOnly {
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    @media @tablet {
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &--link {
+      transition-property: color, border-bottom-color;
+      transition-duration: 150ms;
+      transition-timing-function: ease-out;
+      border-bottom-color: @linkContactsEmailBorder;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+
+      &:hover {
+        color: @linkContactsEmailTextHover;
+        border-bottom-color: @linkContactsEmailBorderHover;
+      }
+
+      &:active {
+        color: fade(@linkContactsEmailTextActive, 30%);
+        border-bottom-color: fade(@linkContactsEmailBorderActive, 10%);
+      }
     }
   }
 
   &__map {
     min-width: 320px;
     min-height: 457px;
-
     background-color: @veryLightGrayLighter;
-    background-image: url("../img/icons/icon-map-pin.svg"),
-    url("../img/maps/map-mobile@1x.jpg");
     background-repeat: no-repeat;
 
-
     @media @mobileOnly {
+      background-image: url("../img/icons/icon-map-pin.svg"),
+      url("../img/maps/map-mobile@1x.jpg");
       margin-top: 37px;
-
-      background-position: 123px 165px, top center;
+      background-position: 48.8% 46.3%, top center;
     }
 
     @media @tabletOnly {
-      margin-top: 54px;
-
-      background-position: 348px 165px, top center;
+      background-image: url("../img/icons/icon-map-pin.svg"),
+      url("../img/maps/map-tablet@1x.jpg");
+      margin-top: 56px;
+      background-position: 49.4% 46.7%, top center;
     }
 
     @media @desktop {
       position: absolute;
-      top: 0;
-      right: -100%;
-
-      width: 100%;
-
-      background-position: 238px 165px, top center;
+      top: -58px;
+      right: @desktopSideOffset;
+      left: 50%;
+      background-image: url("../img/icons/icon-map-pin.svg"),
+      url("../img/maps/map-desktop@1x.jpg");
+      background-position: 51.4% 46.9%, top center;
     }
   }
 

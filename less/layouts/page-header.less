@@ -1,23 +1,61 @@
 .page-header {
   min-width: @minWidth;
-
   background-color: @navBackground;
 
-  &__wrapper {
-    padding-top: 22px;
-    padding-bottom: 18px;
+  @media @tablet {
+    position: relative;
+  }
 
+  &::after {
+    @media @tabletOnly {
+      bottom: -12px;
+      height: 24px;
+    }
+
+    @media @tablet {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      content: "";
+      background-image: url("../img/decor/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+
+    @media @desktop {
+      bottom: -16px;
+      height: 34px;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: 18px;
     background-color: @headerBackground;
     box-shadow: 0 -1px @navBorder;
 
+    @media @mobileOnly {
+      padding-top: 22px;
+    }
+
     @media @tablet {
       margin-top: @tabletMenuItemVerticalOffset;
+      padding-top: 17px;
     }
 
     &--index {
-      background-image: url("../img/header/hero-mobile@1x.jpg");
+      background-color: @veryLightGrayLighterLight;
       background-repeat: no-repeat;
-      background-position: center -17px;
+
+      @media @mobileOnly {
+        background-image: url("../img/header/hero-mobile@1x.jpg");
+        background-position: center -17px;
+      }
+
+      @media @mobileOnlyRetina2x {
+        background-image: url("../img/header/hero-mobile@2x.jpg");
+        background-size: 573px auto;
+      }
 
       @media @mobileOnly {
         min-height: 282px;
@@ -26,8 +64,18 @@
       }
 
       @media @tablet {
+        background-image: url("../img/header/hero-desktop@1x.jpg");
+        background-position: center;
+      }
+
+      @media @tabletRetina2x {
+        background-image: url("../img/header/hero-desktop@2x.jpg");
+        background-size: 1150px auto;
+      }
+
+      @media @tablet {
         min-height: 746px;
-        padding-top: 0;
+        padding-bottom: 145px;
       }
     }
 
@@ -42,10 +90,6 @@
         min-height: 226px;
       }
 
-      @media @tablet {
-        padding-top: 0;
-      }
-
       @media @desktop {
         min-height: 255px;
       }
@@ -53,24 +97,17 @@
   }
 
   &__note {
-    display: none;
+    .center();
 
+    display: none;
     margin-top: 0;
-    padding-top: 17px;
 
     @media @tablet {
       font-size: 15px;
       line-height: 24px;
-
       display: block;
-
-      margin-right: @tabletSideOffset;
-
+      padding-right: @tabletSideOffset;
       text-align: right;
-    }
-
-    @media @desktop {
-      margin-right: @desktopSideOffset;
     }
   }
 
@@ -82,20 +119,19 @@
     @media @mobileOnly {
       font-size: 27px;
       line-height: 30px;
-      padding-left: @mobileSideOffset;
       padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
     }
 
     @media @tabletOnly {
       font-size: 43px;
       line-height: 50px;
-
       margin-top: 54px;
     }
 
     @media @tablet {
-      padding-left: @tabletSideOffset;
       padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
     }
 
     @media @desktop {
@@ -105,7 +141,9 @@
     }
 
     &--index {
-      max-width: 615px;
+      @media @mobileOnly {
+        max-width: 400px;
+      }
 
       @media @tablet {
         margin-top: 112px;
