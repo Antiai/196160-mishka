@@ -70,6 +70,12 @@
     }
   }
 
+  &__slider {
+    @media @tablet {
+      order: 1;
+    }
+  }
+
   &__content {
     line-height: 30px;
     color: @txtContent;
@@ -84,7 +90,6 @@
 
     @media @tablet {
       font-size: 17px;
-      order: 1;
       margin-top: 45px;
     }
 
@@ -98,10 +103,6 @@
     @media @mobileOnly {
       margin-top: 26px;
       margin-bottom: 30px;
-    }
-
-    @media @tablet {
-      order: 1;
     }
   }
 
@@ -146,6 +147,8 @@
     @media @tablet {
       order: 1;
       width: 175px;
+      margin-left: auto;
+      margin-top: -58px;
     }
   }
 
@@ -172,7 +175,7 @@
 
     &--arrow {
       width: 50%;
-      transition: opacity 150ms ease-out;
+      transition: opacity 200ms ease-out;
 
       @media @mobileOnly {
         padding-top: 12px;

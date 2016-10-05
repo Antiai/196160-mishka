@@ -1,35 +1,35 @@
 .company {
   @media @mobileOnly {
-    padding-bottom: 21px;
     padding-top: 27px;
+    padding-bottom: 21px;
   }
 
   @media @tabletOnly {
-    padding-bottom: 43px;
     padding-top: 48px;
+    padding-bottom: 43px;
   }
 
   @media @desktop {
-    padding-bottom: 49px;
     padding-top: 59px;
+    padding-bottom: 49px;
   }
 
   &__wrapper {
     .center();
 
     @media @mobileOnly {
-      padding-left: @mobileSideOffset;
       padding-right: @mobileSideOffset;
+      padding-left: @mobileSideOffset;
     }
 
     @media @tabletOnly {
-      padding-left: @tabletSideOffset;
       padding-right: @tabletSideOffset;
+      padding-left: @tabletSideOffset;
     }
 
     @media @desktop {
-      padding-left: (@desktopSideOffset + @desktopOffset);
       padding-right: @desktopSideOffset;
+      padding-left: (@desktopSideOffset + @desktopOffset);
     }
   }
 
@@ -49,20 +49,20 @@
 
   &__features {
     font-weight: bold;
-    list-style: none;
     margin: 0;
     padding-left: 0;
+    list-style: none;
 
     @media @mobileIntermediate {
-      align-content: center;
       display: flex;
+      align-content: center;
       flex-wrap: wrap;
     }
   }
 
   &__feature {
-    padding-top: 70px;
     position: relative;
+    padding-top: 70px;
 
     @media @mobileOnly {
       margin-bottom: 13px;
@@ -93,9 +93,9 @@
     }
   }
 
-  &__advantage {
-    margin-bottom: 0;
+  &__feature-content {
     margin-top: 0;
+    margin-bottom: 0;
 
     @media @mobileOnly {
       font-size: 17px;
@@ -116,12 +116,12 @@
     }
   }
 
-  &__icon {
-    display: block;
-    left: 24px;
+  &__feature-icon {
     position: absolute;
-    transform: translateX(-50%) translateY(-50%);
+    left: 24px;
+    display: block;
     fill: @iconCompanyFill;
+    transform: translateX(-50%) translateY(-50%);
 
     @media @mobileOnly {
       top: 33px;

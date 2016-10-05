@@ -161,9 +161,8 @@
     }
 
     &--link {
-      transition-property: color, border-bottom-color;
-      transition-duration: 150ms;
-      transition-timing-function: ease-out;
+      transition: border-bottom-color 200ms ease-out,
+      color 200ms ease-out;
       border-bottom-color: @linkContactsEmailBorder;
       border-bottom-width: 1px;
       border-bottom-style: solid;
@@ -180,9 +179,20 @@
     }
   }
 
-  &__map {
+  &__location {
     min-width: 320px;
-    min-height: 457px;
+
+    @media @desktop {
+      position: absolute;
+      top: -58px;
+      right: @desktopSideOffset;
+      left: 50%;
+    }
+  }
+
+  &__map {
+    // min-width: 320px;
+    height: 457px;
     background-color: @veryLightGrayLighter;
     background-repeat: no-repeat;
 
@@ -201,10 +211,10 @@
     }
 
     @media @desktop {
-      position: absolute;
-      top: -58px;
-      right: @desktopSideOffset;
-      left: 50%;
+      // position: absolute;
+      // top: -58px;
+      // right: @desktopSideOffset;
+      // left: 50%;
       background-image: url("../img/icons/icon-map-pin.svg"),
       url("../img/maps/map-desktop@1x.jpg");
       background-position: 51.4% 46.9%, top center;

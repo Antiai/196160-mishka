@@ -16,15 +16,37 @@
     }
   }
 
-  &__logo {
-    display: none;
-    transition-timing-function: ease-out;
-    transition-duration: 150ms;
-    transition-property: fill, opacity;
+  &__container {
+    @media @mobileOnly {
+      min-height: 80px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
 
     @media @tablet {
-      display: block;
       width: 184px;
+    }
+
+    &:last-child {
+      @media @mobileOnly {
+        border-top: 1px solid @footerBorder;
+      }
+    }
+
+    &--logo {
+      @media @mobileOnly {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    transition: fill 200ms ease-out,
+    opacity 200ms ease-out;
+
+    @media @tablet {
+      display: inline;
+      width: auto;
     }
 
     &[href]:hover {

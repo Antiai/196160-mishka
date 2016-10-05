@@ -41,7 +41,7 @@
 
     border-color: fade(@formSizeBorder, 10%);
     color: @formText;
-    transition: border-color 150ms ease-out;
+    transition: border-color 200ms ease-out;
 
     &:hover {
       background-color: @formSizeSelectBackgroundHover;
@@ -76,19 +76,16 @@
     color: @btnCartAddText;
     min-height: 52px;
     width: 100%;
-    transition-property: background-color, color, transform;
-    transition-duration: 150ms;
-    transition-timing-function: ease-out;
+    transition: background-color 200ms ease-out,
+    color 200ms ease-out;
     position: relative;
 
     &:hover {
       background-color: @btnCartAddBackgroundHover;
       color: @btnCartAddTextHover;
-      transform: translateY(-5px);
 
       &::after {
         left: 0;
-        transform: translateY(5px);
         background-color: @btnCartAddBackgroundHover;
       }
     }
@@ -96,25 +93,6 @@
     &:active {
       background-color: @btnCartAddBackgroundHover;
       color: fade(@btnCartAddTextActive, 30%);
-
-      &::after {
-        left: 0;
-        transform: translateY(5px);
-        background-color: @btnCartAddBackgroundHover;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      height: 5px;
-      width: 100%;
-      background-color: @btnCartAddBackground;
-      left: 0;
-      bottom: 0;
-      transition-property: background-color, transform;
-      transition-duration: 150ms;
-      transition-timing-function: ease-out;
     }
   }
 }

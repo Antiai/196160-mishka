@@ -3,8 +3,8 @@
     font-family: @family;
     font-weight: @weight;
     font-style: @style;
-    src: url("../../fonts/@{src}.woff") format("woff"),
-    url("../../fonts/@{src}.woff2") format("woff2");
+    src: url("../fonts/@{src}.woff") format("woff"),
+    url("../fonts/@{src}.woff2") format("woff2");
   }
 }
 
@@ -18,9 +18,8 @@
   padding-bottom: 16px;
   padding-left: 16px;
   cursor: pointer;
-  transition-timing-function: ease-out;
-  transition-duration: 150ms;
-  transition-property: background-color, color;
+  transition: background-color 200ms ease-out,
+  color 200ms ease-out;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -98,8 +97,8 @@
 
 .set-box() {
   content: "";
+  transition: border-color 200ms ease-out;
   border: 2px solid @formFilterBorder;
-  transition: border-color 150ms ease-out;
 
   @media @mobileOnly {
     width: @mobileCheckBoxSize;
