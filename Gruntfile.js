@@ -140,7 +140,7 @@ module.exports = function(grunt) {
     "csso",
     "uglify",
     "replace",
-    "imagemin",
-    "copy"
+    "copy",
+    "imagemin"
   ]);
 };

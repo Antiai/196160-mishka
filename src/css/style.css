@@ -1197,25 +1197,20 @@ body {
 .manufacture__video {
   margin-right: auto;
   margin-left: auto;
-  display: flex;
   background-color: #f1f1f1;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .manufacture__play {
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
   cursor: pointer;
-  transition: opacity 200ms ease-out, transform 200ms ease-out;
+  transform: translateX(-50%) translateY(-50%);
   border: none;
   outline: none;
   background: none;
-}
-.manufacture__play:hover {
-  transform: scale(1.2);
-}
-.manufacture__play:active {
-  transform: scale(0.8);
-  opacity: 0.3;
 }
 .manufacture__icon {
   display: block;
@@ -1224,8 +1219,14 @@ body {
   fill: #63d1bb;
 }
 .manufacture__icon--play {
-  width: 100%;
-  height: auto;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+.manufacture__icon--play:hover {
+  transform: scale(1.2);
+}
+.manufacture__icon--play:active {
+  transform: scale(0.8);
+  opacity: 0.3;
 }
 .manufacture__description {
   color: #444;
@@ -2240,6 +2241,7 @@ body {
     max-width: 900px;
   }
   .manufacture__video {
+    position: relative;
     width: 100%;
     background-image: url("../img/video/video-tablet@1x.jpg");
   }
@@ -2593,9 +2595,9 @@ body {
     position: relative;
     width: 100%;
     min-height: 455px;
+    margin-bottom: 57px;
     padding-top: 42px;
     padding-left: 682px;
-    margin-bottom: 57px;
   }
   .manufacture__wrapper {
     min-width: 230px;
@@ -3030,7 +3032,7 @@ body {
   .manufacture__wrapper--caption {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: 96px;
     padding-right: 0;
   }
@@ -3039,6 +3041,7 @@ body {
     width: 170px;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -3046,6 +3049,7 @@ body {
     max-width: 600px;
   }
   .manufacture__video {
+    position: relative;
     min-height: 150px;
     margin-bottom: 28px;
     background-image: url("../img/video/video-mobile@1x.jpg");
