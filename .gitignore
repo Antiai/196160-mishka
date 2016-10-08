@@ -5,6 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
+src/css/*.css
 build/
 css/*.css
 node_modules/
