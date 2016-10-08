@@ -99,19 +99,21 @@
   content: "";
   transition: border-color 200ms ease-out;
   border: 2px solid @formFilterBorder;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   @media @mobileOnly {
     width: @mobileCheckBoxSize;
     min-width: @mobileCheckBoxSize;
     height: @mobileCheckBoxSize;
-    margin-right: 22px;
   }
 
   @media @tablet {
     width: @tabletCheckBoxSize;
     min-width: @tabletCheckBoxSize;
     height: @tabletCheckBoxSize;
-    margin-right: 28px;
   }
 }
 

@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка: Форма заказа</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Mishka">
+    <meta name="application-name" content="Mishka">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
@@ -94,7 +104,7 @@
             <ul class="form-order__filters  form-order__filters--checkbox">
               <li class="form-order__item  form-order__item--checkbox">
                 <input type="checkbox" id="white" class="form-order__filter  form-order__filter--checkbox" checked>
-                <label for="white" class="form-order__label  form-order__label--checkbox">Белый</label>
+                <label for="white" class="form-order__label  form-order__label--checkbox" role="checkbox"  tabindex="0" onkeydown="toggleCheckbox(event)" onclick="toggleCheckbox(event)" onfocus="focusCheckbox(event)" >Белый</label>
               </li>
               <li class="form-order__item  form-order__item--checkbox">
                 <input type="checkbox" id="grey" class="form-order__filter  form-order__filter--checkbox" checked>
@@ -166,7 +176,7 @@
           </fieldset>
         </div>
         <div class="form-order__wrapper  form-order__wrapper--textarea">
-          <fieldset class="form-order__fieldset">
+          <fieldset class="form-order__fieldset  form-order__fieldset--textarea">
             <legend class="form-order__legend  form-order__legend--textarea">
               <label for="additionally" class="form-order__label  form-order__label--legend">Доп</label>
             </legend>
