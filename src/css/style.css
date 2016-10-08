@@ -1201,32 +1201,34 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.manufacture__play {
+.manufacture__play-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   display: block;
-  cursor: pointer;
   transform: translateX(-50%) translateY(-50%);
+}
+.manufacture__play {
+  display: block;
+  cursor: pointer;
   border: none;
   outline: none;
   background: none;
+  padding: 0;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+.manufacture__play:hover {
+  transform: scale(1.2);
+}
+.manufacture__play:active {
+  transform: scale(0.8);
+  opacity: 0.3;
 }
 .manufacture__icon {
   display: block;
 }
 .manufacture__icon--video {
   fill: #63d1bb;
-}
-.manufacture__icon--play {
-  transition: opacity 200ms ease-out, transform 200ms ease-out;
-}
-.manufacture__icon--play:hover {
-  transform: scale(1.2);
-}
-.manufacture__icon--play:active {
-  transform: scale(0.8);
-  opacity: 0.3;
 }
 .manufacture__description {
   color: #444;
@@ -1316,8 +1318,8 @@ body {
   background-color: #444;
 }
 .form-order__filter--checkbox:checked + label::after {
-  left: 0;
   top: 0;
+  left: 0;
   content: "";
   background-image: url("../img/icons/icon-tick.svg");
   background-repeat: no-repeat;
@@ -1325,8 +1327,8 @@ body {
 }
 .form-order__label {
   font-weight: bold;
-  cursor: pointer;
   display: block;
+  cursor: pointer;
 }
 .form-order__label:hover::before {
   border-color: #63d1bb;
@@ -1863,8 +1865,8 @@ body {
   .form-order__fieldset {
     position: relative;
     display: flex;
-    border: none;
     padding-top: 0;
+    border: none;
   }
   .form-order__fieldset--name {
     flex-direction: column;
@@ -1887,12 +1889,12 @@ body {
     padding-left: 80px;
   }
   .form-order__item--checkbox {
-    padding-left: 80px;
     min-height: 52px;
+    padding-left: 80px;
   }
   .form-order__filter--radio:checked + label::after {
-    left: 15px;
     top: 15px;
+    left: 15px;
     width: 22px;
     height: 22px;
   }
@@ -3130,12 +3132,12 @@ body {
     margin-bottom: 13px;
   }
   .form-order__item--checkbox {
-    padding-left: 62px;
     min-height: 40px;
+    padding-left: 62px;
   }
   .form-order__filter--radio:checked + label::after {
-    left: 12px;
     top: 12px;
+    left: 12px;
     width: 16px;
     height: 16px;
   }

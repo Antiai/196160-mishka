@@ -152,16 +152,32 @@
     }
   }
 
-  &__play {
+  &__play-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     display: block;
-    cursor: pointer;
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__play {
+    display: block;
+    cursor: pointer;
     border: none;
     outline: none;
     background: none;
+    padding: 0;
+    transition: opacity 200ms ease-out,
+    transform 200ms ease-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
   }
 
   &__icon {
@@ -172,20 +188,6 @@
 
       @media @desktop {
         margin-left: 2px;
-      }
-    }
-
-    &--play {
-      transition: opacity 200ms ease-out,
-      transform 200ms ease-out;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-
-      &:active {
-        transform: scale(0.8);
-        opacity: 0.3;
       }
     }
   }

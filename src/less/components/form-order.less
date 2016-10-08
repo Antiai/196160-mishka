@@ -57,8 +57,8 @@
     @media @tablet {
       position: relative;
       display: flex;
-      border: none;
       padding-top: 0;
+      border: none;
     }
 
     @media @desktop {
@@ -195,8 +195,8 @@
       position: relative;
 
       @media @mobileOnly {
-        padding-left: 62px;
         min-height: @mobileCheckBoxSize;
+        padding-left: 62px;
       }
 
       @media @mobileIntermediateTablet {
@@ -204,8 +204,8 @@
       }
 
       @media @tablet {
-        padding-left: 80px;
         min-height: @tabletCheckBoxSize;
+        padding-left: 80px;
       }
 
       @media @desktop {
@@ -237,15 +237,15 @@
         background-color: @formFilterChecked;
 
         @media @mobileOnly {
-          left: (@mobileCheckBoxSize/2 - 8px);
           top: (@mobileCheckBoxSize/2 - 8px);
+          left: (@mobileCheckBoxSize/2 - 8px);
           width: 16px;
           height: 16px;
         }
 
         @media @tablet {
-          left: (@tabletCheckBoxSize/2 - 11px);
           top: (@tabletCheckBoxSize/2 - 11px);
+          left: (@tabletCheckBoxSize/2 - 11px);
           width: 22px;
           height: 22px;
         }
@@ -258,8 +258,8 @@
 
     &--checkbox {
       &:checked + label::after {
-        left: 0;
         top: 0;
+        left: 0;
         content: "";
         background-image: url("../img/icons/icon-tick.svg");
         background-repeat: no-repeat;
@@ -281,8 +281,8 @@
 
   &__label {
     font-weight: bold;
-    cursor: pointer;
     display: block;
+    cursor: pointer;
 
     @media @mobileOnly {
       font-size: 17px;
