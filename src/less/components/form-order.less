@@ -56,7 +56,6 @@
 
     @media @tablet {
       position: relative;
-      display: flex;
       padding-top: 0;
       border: none;
     }
@@ -294,16 +293,12 @@
       line-height: 19px;
     }
 
-    &:hover {
-      &::before {
-        border-color: @formFilterBorderHover;
-      }
+    &:hover::before {
+      border-color: @formFilterBorderHover;
     }
 
-    &:active {
-      &::before {
-        border-color: fade(@formFilterBorderActive, 30%);
-      }
+    &:active::before {
+      border-color: fade(@formFilterBorderActive, 30%);
     }
 
     &::after {

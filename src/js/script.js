@@ -10,6 +10,7 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
+        icon: "img/icons/icon-map-pin.svg",
         title: "Ждем Вас у Мишки!"
     });
 }

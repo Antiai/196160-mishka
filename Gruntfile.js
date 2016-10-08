@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "build/css/style.min.css": ["src/css/style.css"]
+          "build/css/style.min.css": ["build/css/style.css"]
         }
       }
     },
@@ -66,7 +66,10 @@ module.exports = function(grunt) {
           cwd: "src/",
           src: [
             "fonts/**/*.{woff,woff2}",
-            "img/**"
+            "css/**",
+            "img/**",
+            "js/**",
+            "*.html"
           ],
           dest: "build"
         }]
@@ -75,14 +78,11 @@ module.exports = function(grunt) {
 
     replace: {
       inline: {
-        src: ["src/*.html"],
+        src: ["build/*.html"],
         dest: "build/",
         replacements: [{
           from: "css/style.css",
           to: "css/style.min.css"
-        }, {
-          from: "js/picturefill.js",
-          to: "js/picturefill.min.js"
         }, {
           from: "js/script.js",
           to: "js/script.min.js"
@@ -96,8 +96,7 @@ module.exports = function(grunt) {
       },
       jsmini: {
         files: {
-          "build/js/script.min.js": ["src/js/script.js"],
-          "build/js/picturefill.min.js": ["src/js/picturefill.js"],
+          "build/js/script.min.js": ["build/js/script.js"],
         }
       }
     },
@@ -137,10 +136,10 @@ module.exports = function(grunt) {
     "clean",
     "less",
     "postcss",
+    "copy",
     "csso",
     "uglify",
     "replace",
-    "copy",
     "imagemin"
   ]);
 };
