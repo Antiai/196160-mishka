@@ -158,3 +158,12 @@
     }
   }
 }
+
+// move menu-items vertically in mobile main menu
+.mobile-menu-item-transform(@i) when (@i > 0) {
+  &:nth-child(@{i}) {
+    @media @mobileOnly {
+      transform: translateY((@i - 1)*@menuItemMinHeight);
+    }
+  }
+}

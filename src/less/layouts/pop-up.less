@@ -1,40 +1,42 @@
 .pop-up {
-  width: 100%;
-  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
   background-color: fade(@popupFixedLayout, 90%);
 
-  &--close {
-    display: none;
+  &--open {
+    display: block;
   }
 
   &__wrapper {
-    margin-left: auto;
-    margin-right: auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background-color: @popupBackground;
-
-    box-shadow: 0 5px 10px fade(@popupShadow, 25%);
     max-width: 566px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateX(-50%) translateY(-50%);
     outline: 1px solid @popupBorder;
+    background-color: @popupBackground;
+    box-shadow: 0 5px 10px fade(@popupShadow, 25%);
+    width: 100%;
 
     @media @mobileOnly {
+      min-width: 320px;
+      padding-top: 30px;
+      padding-right: @mobileSideOffset;
       padding-bottom: 46px;
       padding-left: @mobileSideOffset;
-      padding-right: @mobileSideOffset;
-      padding-top: 30px;
     }
 
     @media @tablet {
+      padding-top: 34px;
+      padding-right: 106px;
       padding-bottom: 45px;
       padding-left: 106px;
-      padding-right: 106px;
-      padding-top: 34px;
     }
   }
 
