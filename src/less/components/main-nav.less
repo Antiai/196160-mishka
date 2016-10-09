@@ -30,23 +30,20 @@
 
   &__item {
     @media @mobileOnly {
-      position: relative;
-      min-height: @MenuItemMinHeight;
+      width: 100%;
+      min-height: @menuItemMinHeight;
       padding-top: 27px;
       padding-bottom: 27px;
       background-color: @navBackground;
       box-shadow: 0 1px @navBorder,
       inset 0 1px @navBorder;
+      z-index: 2;
     }
 
     @media @tablet {
       min-height: @tabletMenuItemMinHeight;
       padding-top: 32px;
       padding-bottom: 32px;
-    }
-
-    &--closed {
-      display: none;
     }
 
     &--logo {
@@ -62,6 +59,7 @@
         padding-right: @mobileSideOffset;
         padding-bottom: 20px;
         padding-left: @mobileSideOffset;
+        z-index: 3;
       }
 
       @media @tabletOnly {
@@ -160,6 +158,30 @@
         padding-top: 17px;
       }
     }
+
+    &--mobile {
+      @media @mobileOnly {
+        display: none;
+      }
+    }
+
+    &--open {
+      @media @mobileOnly {
+        display: block;
+      }
+    }
+
+    &--outflow {
+      .mobile-menu-item-transform(2);
+      .mobile-menu-item-transform(3);
+      .mobile-menu-item-transform(4);
+      .mobile-menu-item-transform(5);
+      
+      @media @mobileOnly {
+        position: absolute;
+        top: 0;
+      }
+    }
   }
 
   &__toggle {
@@ -200,23 +222,23 @@
       }
     }
 
-    &--opened {
+    &--open {
       @media @mobileOnly {
         box-shadow: none;
       }
 
 
-      &:before {
+      &::before {
         @media @mobileOnly {
           width: 26px;
-          transform: rotateZ(45deg);
+          transform: translateX(2px) rotateZ(45deg);
         }
       }
 
-      &:after {
+      &::after {
         @media @mobileOnly {
           width: 26px;
-          transform: translateY(-6px) rotateZ(-45deg);
+          transform: translateX(2px) translateY(-6px) rotateZ(-45deg);
         }
       }
     }

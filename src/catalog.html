@@ -37,17 +37,17 @@
             <a class="main-nav__toggle    main-nav__toggle--opened" href="#"><span class="visually-hide">Открыть меню</span></a>
           </li>
           <!-- Use --mobile to select mobile menu items. Add main-nav__item--closed to close mobile menu -->
-          <li class="main-nav__item  main-nav__item--catalog  main-nav__item--mobile">
+          <li class="main-nav__item  main-nav__item--catalog  main-nav__item--mobile  main-nav__item--open">
             <span class="main-nav__wrapper">
               <a class="main-nav__link  main-nav__link--active  main-nav__link--small-tab">Каталог товаров</a>
             </span>
           </li>
-          <li class="main-nav__item  main-nav__item--form  main-nav__item--mobile">
+          <li class="main-nav__item  main-nav__item--form  main-nav__item--mobile  main-nav__item--open">
             <span class="main-nav__wrapper  main-nav__wrapper--form">
               <a href ="form.html" class="main-nav__link  main-nav__link--small-tab">Вязание на заказ</a>
             </span>
           </li>
-          <li class="main-nav__item  main-nav__item--search  main-nav__item--mobile">
+          <li class="main-nav__item  main-nav__item--search  main-nav__item--mobile  main-nav__item--open">
             <span class="main-nav__wrapper">
               <a class="main-nav__link  main-nav__link--search" href="#">
                 <svg class="main-nav__icon" xmlns="http://www.w3.org/2000/svg" width="17.6" height="17.6" viewBox="-0.8 -0.8 17.6 17.6">
@@ -57,7 +57,7 @@
               </a>
             </span>
           </li>
-          <li class="main-nav__item  main-nav__item--cart  main-nav__item--mobile">
+          <li class="main-nav__item  main-nav__item--cart  main-nav__item--mobile  main-nav__item--open">
             <span class="main-nav__wrapper  main-nav__wrapper--cart">
               <a class="main-nav__link  main-nav__link--cart" href="#">
                 <svg class= "main-nav__icon  main-nav__icon--cart" xmlns="http://www.w3.org/2000/svg" width="20.294" height="18.849" viewBox="264.205 370.961 20.294 18.849">
@@ -184,7 +184,7 @@
             </div>
             <div class="manufacture__wrapper">
               <p class="manufacture__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-              <a href="#" class="manufacture__btn">Сделать заказ</a>
+              <a href="#" id="order" class="manufacture__btn">Сделать заказ</a>
             </div>
           </article>
         </div>
@@ -229,7 +229,7 @@
         </div>
       </div>
     </footer>
-    <section class="pop-up  pop-up--close">
+    <section class="pop-up">
       <div class="pop-up__wrapper">
         <h2 class="pop-up__title">Добавить в&nbsp;корзину</h2>
         <form class="form-cart" action="https://echo.htmlacademy.ru/" method="post">
@@ -248,5 +248,6 @@
         </form>
       </div>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
