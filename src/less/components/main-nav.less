@@ -176,10 +176,34 @@
       .mobile-menu-item-transform(3);
       .mobile-menu-item-transform(4);
       .mobile-menu-item-transform(5);
-      
+
       @media @mobileOnly {
         position: absolute;
         top: 0;
+      }
+
+      &:nth-child(2) {
+        @media @mobileOnly {
+          animation: main-nav__item-2-drop 600ms ease-out;
+        }
+      }
+
+      &:nth-child(3) {
+        @media @mobileOnly {
+          animation: main-nav__item-3-drop 600ms ease-out;
+        }
+      }
+
+      &:nth-child(4) {
+        @media @mobileOnly {
+          animation: main-nav__item-4-drop 600ms ease-out;
+        }
+      }
+
+      &:nth-child(5) {
+        @media @mobileOnly {
+          animation: main-nav__item-5-drop 600ms ease-out;
+        }
       }
     }
   }
@@ -232,6 +256,7 @@
         @media @mobileOnly {
           width: 26px;
           transform: translateX(2px) rotateZ(45deg);
+          animation: main-nav__toggle-before 600ms;
         }
       }
 
@@ -239,6 +264,7 @@
         @media @mobileOnly {
           width: 26px;
           transform: translateX(2px) translateY(-6px) rotateZ(-45deg);
+          animation: main-nav__toggle-after 600ms;
         }
       }
     }
@@ -416,5 +442,79 @@
         display: none;
       }
     }
+  }
+}
+
+@keyframes main-nav__toggle-before {
+  0% {
+    width: 20px;
+    transform: translateX(2px) rotateZ(0);
+  }
+
+  25% {
+    width: 20px;
+    transform: translateX(2px) rotateZ(0);
+  }
+
+  100% {
+    width: 26px;
+    transform: translateX(2px) rotateZ(45deg);
+  }
+}
+
+@keyframes main-nav__toggle-after {
+  0% {
+    width: 20px;
+    transform: translateX(2px) translateY(0) rotateZ(0);
+  }
+
+  25% {
+    width: 20px;
+    transform: translateX(2px) translateY(-6px) rotateZ(0);
+  }
+
+  100% {
+    width: 26px;
+    transform: translateX(2px) translateY(-6px) rotateZ(-45deg);
+  }
+}
+
+@keyframes main-nav__item-2-drop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(@menuItemMinHeight);
+  }
+}
+
+@keyframes main-nav__item-3-drop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(2*@menuItemMinHeight);
+  }
+}
+
+@keyframes main-nav__item-4-drop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(3*@menuItemMinHeight);
+  }
+}
+
+@keyframes main-nav__item-5-drop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(4*@menuItemMinHeight);
   }
 }
