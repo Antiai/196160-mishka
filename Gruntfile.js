@@ -131,13 +131,12 @@ module.exports = function(grunt) {
 
     "gh-pages": {
       options: {
-        base: "build"
+        base: "build",
       },
       src: ["**"]
     }
   });
 
-  grunt.registerTask("gh-pages", ["less", "postcss"]);
   grunt.registerTask("deploy", ["less", "postcss"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build", [
