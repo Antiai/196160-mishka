@@ -137,7 +137,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask("gh-pages", ["less", "postcss"]);
   grunt.registerTask("deploy", ["less", "postcss"]);
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build", [
