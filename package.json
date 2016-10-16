@@ -25,6 +25,7 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csso": "^2.0.1",
+    "grunt-gh-pages": "^2.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-text-replace": "^0.4.0",
     "load-grunt-tasks": "^3.5.2"
@@ -32,6 +33,7 @@
   "scripts": {
     "test": "editorconfig-cli",
     "build": "grunt build",
+    "publish": "grunt build && grunt gh-pages",
     "start": "grunt deploy && grunt serve"
   },
   "editorconfig-cli": [
